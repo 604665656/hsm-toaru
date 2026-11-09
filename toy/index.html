@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0e1520">
 <meta name="color-scheme" content="dark light">
-<title>哈士喵勇闯魔法禁书目录 · v0.38</title>
+<title>哈士喵勇闯魔法禁书目录 · v0.65</title><meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
 :root{--bg:#0e1520;--bg2:#182436;--paper:#f5ecda;--ink:#20293a;--blue:#7cc0f5;--gold:#f4c96b;--pink:#f29bb0;--green:#8ed9ad;--red:#ef8a8a;--line:#3a4c66;--soft:#e6d9bf}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(1200px 700px at 15% -10%,#243b57 0%,transparent 60%),radial-gradient(900px 600px at 100% 0%,#2a2440 0%,transparent 55%),var(--bg);color:var(--paper);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.78;font-size:16px}
@@ -40,7 +40,6 @@ kbd{background:#e5dcc8;border:1px solid #c8b99c;border-bottom-width:2px;border-r
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
 @media print{.toolbar,.tabs,.skip,#bgArt,.modal{display:none!important}.panel{display:block!important;background:#fff;color:#222;box-shadow:none;page-break-inside:avoid}.app{max-width:none}body{background:#fff;color:#222}.map,.hero,.story,.codex{grid-template-columns:1fr 1fr}}
 
-/* ===================== v0.31 · AVG 视觉小说 UI ===================== */
 :root{--vn-line:#c9a35e;--vn-paper:#f3ead6;--vn-glass:#0a1729f2;--vn-blue:#7fb2e5}
 body{background:radial-gradient(1100px 640px at 12% -12%,#1d3a5c 0%,transparent 62%),radial-gradient(900px 620px at 100% 0%,#2b2346 0%,transparent 58%),#070d18;color:var(--vn-paper)}
 .brand h1{color:#ffe9bb;text-shadow:0 2px 14px #0009}.brand p{color:#b9cbdf}
@@ -69,7 +68,6 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .wx-pick{display:inline-flex;align-items:center;gap:6px;background:#1b2f47;border:1px solid #42678d;border-radius:11px;padding:0 10px;min-height:44px;font-size:.9rem;font-weight:700;color:#ffe4ac}
 .wx-pick select{background:#0f2033;color:#eaf2fb;border:1px solid #42678d;border-radius:8px;padding:7px 8px;min-height:34px;font-size:.88rem}
 
-/* ---- 视觉小说舞台 ---- */
 .stage{border:2px solid #b9975a;background:#08131f;box-shadow:0 0 0 4px #0a1524,0 18px 50px #000b}
 .stage::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(125% 95% at 50% 42%,transparent 52%,#030812cc 100%);z-index:5}
 .stage-char{height:80%;max-width:44%;right:3%;bottom:2%;object-fit:contain;object-position:bottom center;z-index:6}
@@ -83,11 +81,11 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .vn-hud{position:absolute;left:0;right:0;top:0;z-index:8;display:flex;gap:8px;justify-content:space-between;align-items:flex-start;padding:10px 14px;pointer-events:none;flex-wrap:wrap}
 .vn-hud span{background:#081624de;border:1px solid #7d9ab8;border-radius:99px;padding:4px 12px;font-size:.8rem;font-weight:800;color:#f3ead6;backdrop-filter:blur(5px);letter-spacing:.02em}
 .vn-hud .wx{color:#ffe4ac;border-color:var(--vn-line)}
-/* 立绘：全部 contain 完整露出，绝不裁 */
+
 .vn-char{position:absolute;right:2%;bottom:2%;height:80%;width:auto;max-width:42%;object-fit:contain;object-position:bottom center;z-index:6;filter:drop-shadow(0 14px 26px #000c)}
 .vn-char.sub{left:4%;right:auto;top:9%;bottom:auto;height:43%;max-width:24%;opacity:.94;object-position:bottom center;z-index:6}
 .vn-char.sub2{left:23%;right:auto;top:15%;bottom:auto;height:36%;max-width:20%;opacity:.88;object-position:bottom center;z-index:6}
-/* 对白气泡 */
+
 .vn-dialog{position:absolute;left:3%;bottom:5%;width:52%;z-index:9;background:linear-gradient(180deg,#0a1729f4,#0b1e35f8);border:2px solid var(--vn-line);border-radius:16px;padding:18px 18px 13px;box-shadow:0 16px 40px #000d,inset 0 1px 0 #ffe4ac33;color:#f5ecda;backdrop-filter:blur(7px)}
 .vn-dialog::before{content:"";position:absolute;top:-11px;left:36px;width:18px;height:18px;background:#0b1e35;border-left:2px solid var(--vn-line);border-top:2px solid var(--vn-line);transform:rotate(45deg)}
 .vn-name{position:absolute;top:-17px;left:20px;background:var(--vn-line);color:#18222f;border:2px solid #ffe4ac;border-radius:99px;padding:2px 15px;font-weight:900;font-size:.85rem;white-space:nowrap}
@@ -113,7 +111,6 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 @media(prefers-reduced-motion:reduce){.vn-caret{animation:none}}
 @media print{.panel,.card,.node,.choice,.entry-list button,.persona-list button,.event,.mediaCard,.feedback,.tag,.chip,.char-btn,.modal-content{background:#fff!important;color:#222!important;border-color:#bbb!important}.vn,.stage{border-color:#888!important;box-shadow:none!important}.vn-dialog{background:#fff!important;color:#222!important;border-color:#666!important}.vn-fx,.vn-shade,.vn::after,.stage::after{display:none!important}}
 
-/* ============ v0.31 · 主页重做 / 选项横条 / 全屏横屏 ============ */
 #bgArt{opacity:.10}
 .masthead{display:flex;gap:22px;align-items:center;justify-content:space-between;flex-wrap:wrap;
  padding:20px 24px;margin:10px 0 14px;border:1px solid #4d6f92;border-radius:18px;
@@ -150,7 +147,6 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .step b{display:block;font-size:.98rem;color:#ffe4ac;margin-bottom:4px}
 .step span{font-size:.78rem;color:#a9c2da;line-height:1.55}
 
-/* --- 选项 / 反馈：底部横条，不遮角色与 HUD --- */
 .vn-dialog.mode-choice{left:2%;bottom:2%;width:60%;max-height:37%;overflow-y:auto;
  padding:13px 14px 11px;border-radius:14px;scrollbar-width:thin}
 .vn-dialog.mode-choice::before{display:none}
@@ -169,7 +165,6 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .vn-dialog.mode-choice #vnBack{margin-bottom:7px}
 .vn-hint{color:#9fb3cb}
 
-/* 右下角按钮组 */
 .vn-corner{position:absolute;right:12px;bottom:10px;z-index:9;display:flex;gap:7px}
 .vn-corner button,.vn-skip{position:static;border:1px solid #7d9ab8;background:#081624d9;color:#f3ead6;
  border-radius:99px;padding:5px 12px;font-size:.76rem;cursor:pointer;backdrop-filter:blur(4px)}
@@ -180,7 +175,7 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
  .vn-land{display:inline-block;background:#3a2f1cde!important;border-color:var(--vn-line)!important;color:#ffe4ac!important}
  .vn-dialog.mode-choice{width:66%}
 }
-/* 全屏：舞台铺满视口，气泡按视口缩放 */
+
 .vn:fullscreen,.stage:fullscreen{width:100vw;height:100vh;max-width:none;aspect-ratio:auto;
  border:0;border-radius:0;box-shadow:none}
 .vn:fullscreen .vn-dialog,.stage:fullscreen .stage-caption{max-width:56vw}
@@ -200,19 +195,18 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
  .vn-dialog.mode-choice .vn-choice{min-height:34px;padding:5px 8px}
 }
 @media print{.masthead{background:#fff!important;border-color:#bbb!important;box-shadow:none}.mh-title h1,.mh-title p,.mh-kicker,.mh-stat b,.mh-ver b,.step b,.step span{color:#222!important}.vn-land,.vn-corner{display:none!important}}
-/* --- v0.31 收尾微调（最后覆盖） --- */
+
 #diff{font-size:.82rem}
 #homeScale{font-size:.78rem;line-height:1.6}
-/* 选项名牌改为气泡内一行，不再被 overflow 裁掉 */
+
 .vn-dialog.mode-choice{width:57%}
 .vn-dialog.mode-choice .vn-name{position:static;display:inline-block;margin:0 0 6px;top:auto;left:auto;
  transform:none;font-size:.76rem;padding:2px 12px}
 .vn-dialog.mode-choice .vn-text{clear:both}
-/* 右下角按钮移到 HUD 下方，彻底不碰角色脚 */
+
 .vn-corner{top:80px;right:12px;bottom:auto}
 @media(max-width:820px){.vn-corner{top:92px}.vn-dialog.mode-choice{width:64%}}
 
-/* ================= v0.31 · 通透 / 简洁 / 伪横屏 ================= */
 :root{--glass:rgba(10,23,41,.60)}
 #bgArt{opacity:.055}
 .app{padding:14px 16px 34px}
@@ -220,7 +214,7 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .card{background:#162b42b8;border-color:#ffffff1c;box-shadow:none}
 .masthead{border-color:#ffffff1f;box-shadow:0 10px 28px #0007}
 .warning,.ok{background:#ffffff0b;border-left-width:4px}
-/* 工具栏：更小、更轻、主行 6 项 */
+
 .toolbar{gap:6px;margin:10px 0 9px}
 .toolbar button,.wx-pick,.tab{min-height:40px;padding:7px 11px;font-size:.84rem;border-radius:10px}
 .toolbar button,.tab{background:#1b2f47a8;border-color:#ffffff26}
@@ -233,7 +227,7 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .toolbar.compact .minor{display:none}
 .tab{white-space:nowrap;flex:none}
 .tabs{gap:6px;padding:3px 2px 7px}
-/* 气泡：更透，文字加投影保可读 */
+
 .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,.58),rgba(11,30,53,.66))!important;
  border-color:rgba(201,163,94,.72)!important;
  backdrop-filter:blur(11px) saturate(1.15)!important;-webkit-backdrop-filter:blur(11px) saturate(1.15)!important;
@@ -245,13 +239,13 @@ h2,h3{color:#ffe4ac}h2{border-bottom:1px solid #ffffff1c;padding-bottom:8px}.lea
 .vn-tools button{background:rgba(22,50,79,.8)}
 .vn-hud span{background:#081624b8;border-color:#7d9ab866}
 .stage-caption{background:#081624c4}
-/* 素材登记卡 */
+
 .perf-reg summary{cursor:pointer;font-weight:800;color:#ffe4ac;font-size:1rem}
 .perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:10px 0}
 .perf-grid div{background:#0f2135a8;border:1px solid #ffffff1a;border-radius:10px;padding:8px 10px}
 .perf-grid b{display:block;color:#ffe4ac;font-size:.86rem;margin-bottom:2px}
 .perf-grid span{font-size:.76rem;color:#a9c2da;line-height:1.5}
-/* ---------- CSS 伪横屏：竖屏手机也能把舞台横过来 ---------- */
+
 body.ls-mode{overflow:hidden;overscroll-behavior:none}
 .ls-target{position:fixed!important;left:50%!important;top:50%!important;right:auto!important;bottom:auto!important;
  width:100vh!important;height:100vw!important;width:100dvh!important;height:100dvw!important;
@@ -272,7 +266,7 @@ body.ls-mode .vn-dialog.mode-choice .vn-text{max-height:3.2em;font-size:.82rem}
 body.ls-mode .vn-tools button{min-height:28px;font-size:.74rem;padding:3px 8px}
 body.ls-mode .vn-dialog.mode-choice .vn-choice{font-size:.78rem;min-height:34px;padding:5px 8px;line-height:1.4}
 body.ls-mode .vn-hud{padding-top:8px}
-/* ---------- 手机竖屏：压成清爽的一屏 ---------- */
+
 @media(max-width:820px){
  .app{padding:8px 8px 26px}
  .masthead{padding:11px 12px;gap:10px;border-radius:14px;margin:6px 0 9px}
@@ -298,9 +292,8 @@ body.ls-mode .vn-hud{padding-top:8px}
  .toolbar.compact .minor{display:inline-block!important}
  .vn-dialog{background:#fff!important;color:#222!important;backdrop-filter:none!important}}
 
-/* ================== v0.31 · 清爽 / 全选项 / 呼吸 / 全屏背景 ================== */
 :root{--glass2:rgba(10,23,41,.60)}
-/* --- 更清爽：整体减重 --- */
+
 #bgArt{opacity:.035}
 .mh-kicker{display:none}
 .masthead{padding:13px 18px;margin:6px 0 9px;border-radius:14px}
@@ -320,7 +313,7 @@ body.more-pages .tab-minor{display:inline-flex}
 .tab-more{border-style:dashed}
 .panel{padding:14px}
 .card,.step{border-color:#ffffff1a}
-/* --- 全屏背景：竖屏 / 横屏各一张 --- */
+
 #fullBg{display:none;position:fixed;inset:0;width:100%;height:100%;object-fit:cover;
  z-index:-1;pointer-events:none}
 body.bg-full #fullBg{display:block}
@@ -332,7 +325,7 @@ body.bg-full .vn-bg,body.bg-full .vn::after{display:none}
 body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 42%,transparent 60%,#06101f77)}
 @media(orientation:portrait){body.bg-full .vn{aspect-ratio:auto;height:min(74dvh,720px)}}
 @media(orientation:landscape){body.bg-full .vn{aspect-ratio:16/9;max-height:84dvh}}
-/* --- 控制条从气泡移到舞台底部，全宽 --- */
+
 .vn-ctl{position:absolute;left:2%;right:2%;bottom:2%;z-index:10;
  display:flex;gap:7px;align-items:center;flex-wrap:wrap;
  background:linear-gradient(180deg,rgba(10,23,41,.60),rgba(11,30,53,.70));
@@ -352,7 +345,7 @@ body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 4
  line-height:1.45;font-size:.84rem}
 .vn-choice:hover{background:rgba(32,80,122,.94)!important;border-color:#a9d0f0}
 .vn-choice b{margin-right:7px;font-size:.88rem}
-/* --- 气泡：对白抬高，选项阶段变顶部题干胶囊 --- */
+
 .vn-dialog{bottom:16%;width:52%;padding:13px 15px 11px;border-radius:13px}
 .vn-dialog .vn-text{min-height:2.2em}
 .vn.choice-mode .vn-char.sub{opacity:.24}
@@ -365,14 +358,14 @@ body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 4
 .vn-dialog.mode-choice .vn-text{clear:none;margin:0;min-height:0;max-height:4.4em;overflow-y:auto;
  font-size:.82rem;line-height:1.5;flex:1}
 .vn-dialog.mode-choice .vn-lead{font-size:.82rem}
-/* --- 角色：呼吸 + 上移，不被选项条遮挡 --- */
+
 .vn-char{bottom:17%;height:70%}
 .vn-char.sub{top:11%;height:38%}
 .vn-char.sub2{top:17%;height:32%}
 .vn.choice-mode .vn-char{bottom:33%;height:53%}
 .vn.choice-mode .vn-char.sub{top:12%;height:33%}
 .vn.choice-mode .vn-char.sub2{top:18%;height:28%}
-/* span 是空内容容器，shrink-to-fit 会塌成 0 宽；必须显式给宽度 */
+
 .vn-actor{display:block;width:42%;max-width:42%}
 .vn-actor.sub{width:24%;max-width:24%}
 .vn-actor.sub2{width:20%;max-width:20%}
@@ -385,7 +378,7 @@ body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 4
 .breathe-css{transform-origin:bottom center;animation:breathCSS 3.4s ease-in-out infinite}
 @keyframes breathCSS{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-4px) scale(1.012)}}
 @media(prefers-reduced-motion:reduce){.vn-actor .a,.vn-actor .b,.breathe-css{animation:none}.vn-actor .b{opacity:0}}
-/* --- 敬请期待 / 人声说明 --- */
+
 .waiting{text-align:center;padding:34px 20px;border-radius:18px;
  background:linear-gradient(160deg,#142a42e8,#0d1d31e8);border:1px solid #c9a35e77}
 .waiting .big{font-size:2.2rem;margin-bottom:6px}
@@ -400,7 +393,7 @@ body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 4
 .voice-grid div{background:#0f2135a8;border:1px solid #ffffff1a;border-radius:10px;padding:9px 11px}
 .voice-grid b{display:block;color:#ffe4ac;font-size:.86rem;margin-bottom:3px}
 .voice-grid span{font-size:.77rem;color:#a9c2da;line-height:1.55}
-/* --- 手机竖屏：更紧凑，但 4 个选项一定全显示 --- */
+
 @media(max-width:820px){
  .masthead{padding:9px 10px;gap:8px}
  .mh-avatar{width:46px;height:46px;border-radius:12px}
@@ -424,7 +417,7 @@ body.bg-full .vn-shade{background:linear-gradient(180deg,#06101f22,transparent 4
  .vn-hint{display:none}
  .voice-grid{grid-template-columns:1fr}
 }
-/* --- 伪横屏下：选项条更矮，四选项仍全可见 --- */
+
 body.ls-mode .vn-dialog.mode-choice{width:70%;top:52px;max-height:none}
 body.ls-mode .vn-dialog{bottom:19%}
 body.ls-mode .vn.choice-mode .vn-char{bottom:26%;height:64%}
@@ -438,14 +431,12 @@ body.ls-mode .vn-choice-mode-dummy{display:none}
  .tab-minor{display:inline-flex!important}
  .vn-ctl{position:static;background:none;border:none;box-shadow:none;backdrop-filter:none}}
 
-/* ================== v0.31 · 全屏背景 / 半身构图 / 更透气泡 / 设置浮层 ================== */
-/* --- 首页去掉头像框后，纯文字更扁更清爽 --- */
 .mh-left{gap:0}
 .masthead{padding:11px 16px;margin:6px 0 8px}
 .mh-title h1{font-size:clamp(1.2rem,3.4vw,1.72rem)}
 .mh-title p{display:none}
 .mh-kicker{display:block!important;font-size:.6rem;letter-spacing:.13em;opacity:.72}
-/* --- 全屏背景：默认开启，横竖 / 伪横屏都铺满 --- */
+
 #fullBg{position:fixed;inset:0;width:100%;height:100%;object-fit:cover;
  z-index:-1;pointer-events:none;display:block}
 body.bg-full{background:#08131f}
@@ -460,7 +451,7 @@ body.ls-mode #fullBg{inset:auto!important;left:50%!important;top:50%!important;r
 body.ls-mode.ls-flip #fullBg{transform:translate(-50%,-50%) rotate(-90deg)!important}
 @media(orientation:portrait){body.bg-full .vn{aspect-ratio:auto;height:min(76dvh,760px)}}
 @media(orientation:landscape){body.bg-full .vn{aspect-ratio:16/9;max-height:86dvh}}
-/* --- 气泡：更透、更小 --- */
+
 .vn-dialog{width:44%;bottom:15%;padding:9px 12px 8px;border-radius:11px;
  background:linear-gradient(180deg,rgba(10,23,41,.30),rgba(11,30,53,.38))!important;
  border-color:rgba(201,163,94,.45)!important;
@@ -474,18 +465,18 @@ body.ls-mode.ls-flip #fullBg{transform:translate(-50%,-50%) rotate(-90deg)!impor
  background:linear-gradient(180deg,rgba(10,23,41,.28),rgba(11,30,53,.34))!important}
 .vn-dialog.mode-choice .vn-name{font-size:.68rem;padding:1px 8px}
 .vn-dialog.mode-choice .vn-text{font-size:.76rem;max-height:3.6em}
-/* --- 控制条也降透明度：角色下半身能透出来 --- */
+
 .vn-ctl{background:linear-gradient(180deg,rgba(10,23,41,.40),rgba(11,30,53,.48))!important;
  border-color:rgba(201,163,94,.5)!important;backdrop-filter:blur(6px) saturate(1.08)!important;
  padding:6px 9px;border-radius:11px;box-shadow:0 8px 22px #0007!important}
 .vn-choice{background:rgba(19,44,72,.55)!important;border-color:rgba(109,158,200,.7)!important}
 .vn-choice:hover{background:rgba(32,80,122,.82)!important}
 .vn-tools button{background:rgba(22,50,79,.62)}
-/* --- 构图：全身 / 半身（下半身没入半透明气泡，凸显上半身） --- */
+
 .vn.frame-full .vn-char{height:88%;bottom:5%}
 .vn.frame-full .vn-actor{width:44%;max-width:44%}
 .vn.frame-full .vn-char.sub{height:44%;top:9%}
-/* 半身：角色贴容器顶部，下半身自然延伸到气泡 / 控制条后面，凸显上半身 */
+
 .vn.frame-half .vn-char{height:100%;top:8%;bottom:auto}
 .vn.frame-half .vn-char.breathe-css,.vn.frame-half .vn-actor .bf{object-position:top center}
 .vn.frame-half .vn-actor{width:54%;max-width:54%}
@@ -497,7 +488,7 @@ body.ls-mode.ls-flip #fullBg{transform:translate(-50%,-50%) rotate(-90deg)!impor
 .vn.frame-half.choice-mode .vn-char{top:8%;bottom:auto}
 .vn.frame-full.choice-mode .vn-char{bottom:29%;height:63%}
 .vn.choice-mode .vn-land{display:none}
-/* --- 设置浮层：可拖动 / 可滚动 / 显眼关闭 --- */
+
 #settingsMask{display:none;position:fixed;inset:0;z-index:200;background:#030812a8;backdrop-filter:blur(2px)}
 body.settings-open #settingsMask{display:block}
 #settingsPanel{display:none;position:fixed;top:70px;right:16px;width:min(370px,92vw);max-height:84dvh;
@@ -533,7 +524,7 @@ body.settings-open #settingsPanel{display:flex}
 #settingsFoot button{width:100%;min-height:46px;border-radius:11px;
  background:#8e3232;color:#fff;border:1px solid #ff9a9a;font-size:.96rem;font-weight:900;cursor:pointer}
 #settingsFoot button:hover{background:#b84343}
-/* 主行只留 4 项，更清爽 */
+
 .toolbar{gap:5px;margin:7px 0}
 .toolbar button,.wx-pick,.tab{min-height:35px;padding:6px 9px;font-size:.78rem}
 #settingsBtn{background:#2d2617;border-color:#c9a35e;color:#ffe4ac;font-weight:900}
@@ -560,8 +551,6 @@ body.ls-mode .vn-dialog{width:52%}
 body.ls-mode #settingsPanel{right:8px;top:50px;max-height:88dvh}
 @media print{#settingsPanel,#settingsMask{display:none!important}}
 
-/* ================== v0.31 · 彻底横屏 / 透明度分层 / 简洁化 ================== */
-/* ---- ① 主页带字容器：恢复可读实底（v0.12 全透明导致字看不清） ---- */
 body.bg-full .app{background:transparent}
 body.bg-full .panel,body.bg-full .card,body.bg-full .step,body.bg-full .masthead,
 body.bg-full .entry-detail,body.bg-full .voice-grid>div,body.bg-full .perf-grid>div{
@@ -573,7 +562,7 @@ body.bg-full .panel h2,body.bg-full .panel h3,body.bg-full .card h3,
 body.bg-full .step b{color:#ffe4ac!important}
 body.bg-full .muted,body.bg-full .step span{color:#b9cee2!important}
 body.bg-full .masthead{border-color:#4d6f92!important}
-/* ---- ② 设置浮层：更透的玻璃；内部按钮保留实底保字 ---- */
+
 #settingsPanel{background:linear-gradient(160deg,rgba(16,38,62,.34),rgba(8,22,38,.40))!important;
  backdrop-filter:blur(18px) saturate(1.25)!important;-webkit-backdrop-filter:blur(18px) saturate(1.25)!important;
  border-color:rgba(201,163,94,.55)!important;box-shadow:0 26px 76px #0009,inset 0 1px 0 #ffe4ac22!important}
@@ -583,7 +572,7 @@ body.bg-full .masthead{border-color:#4d6f92!important}
 #settingsBody button,#settingsBody select{background:rgba(24,52,80,.72)!important;color:#f2f8ff!important;
  text-shadow:0 1px 2px #000b}
 #settingsBody select option{background:#162b42;color:#f2f8ff}
-/* ---- ③ 舞台气泡顺着「再透一点」微调，文字投影加强 ---- */
+
 .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,.26),rgba(11,30,53,.32))!important;
  border-color:rgba(201,163,94,.40)!important;backdrop-filter:blur(4px) saturate(1.04)!important;
  -webkit-backdrop-filter:blur(4px) saturate(1.04)!important}
@@ -592,7 +581,7 @@ body.bg-full .masthead{border-color:#4d6f92!important}
 .vn-ctl{background:linear-gradient(180deg,rgba(10,23,41,.34),rgba(11,30,53,.42))!important}
 .vn-choice{background:rgba(19,44,72,.48)!important}
 .vn-text,.vn-lead{text-shadow:0 1px 2px #000,0 0 7px #000f,0 0 15px #000d,0 0 26px #0009}
-/* ---- ④ 彻底横屏：只留舞台 + 背景 + 同向控制条 ---- */
+
 body.ls-mode .app>*:not(#main){display:none!important}
 body.ls-mode #main>*{display:none!important}
 body.ls-mode #main>#story{display:block!important}
@@ -603,9 +592,7 @@ body.ls-mode .app,body.ls-mode #main,body.ls-mode #story,body.ls-mode #quest{
 body.ls-mode #story[hidden]{display:block!important}
 body.ls-mode .ls-target{border:0!important;border-radius:0!important;box-shadow:none!important;
  overflow:hidden!important;background:transparent!important}
-/* 关键修复：原写法 translate(-50%,-50%)+rotate 在宽高不等时会把舞台整体推到屏幕外，
-   实测 rect 变成 [0,-422,390,844]，四个选项只有两个在视口内。
-   改用 transform-origin:0 0 + rotate(±90deg) translateY/X(-100%)，旋转后精确占满 [0,100dvw]×[0,100dvh]。 */
+
 body.ls-mode .ls-target,body.ls-mode #fullBg,body.ls-mode #lsBar{
  left:0!important;top:0!important;right:auto!important;bottom:auto!important;
  width:100dvh!important;height:100dvw!important;
@@ -615,17 +602,17 @@ body.ls-mode .ls-target,body.ls-mode #fullBg,body.ls-mode #lsBar{
 body.ls-mode.ls-flip .ls-target,body.ls-mode.ls-flip #fullBg,body.ls-mode.ls-flip #lsBar{
  transform:rotate(-90deg) translateX(-100%)!important}
 body.ls-mode #fullBg{z-index:-2;object-fit:cover!important}
-/* 控制条与舞台用同一个旋转矩阵：横过手机后按钮与对白方向完全一致 */
+
 body.ls-mode #lsBar{position:fixed!important;padding:9px 12px;
  background:transparent;pointer-events:none;align-items:flex-start;justify-content:space-between;z-index:170}
 body.ls-mode #lsBar button{pointer-events:auto;
  background:rgba(10,26,44,.78);color:#ffe4ac;border:1px solid #c9a35e;
  border-radius:99px;padding:6px 15px;min-height:38px;font-size:.82rem;font-weight:900;
  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
-/* 横屏里不再需要「横屏」按钮和键盘提示 */
+
 body.ls-mode .vn-tools button:first-child{display:none!important}
 body.ls-mode .vn-hint{display:none!important}
-/* ---- ⑤ 主页更简洁 ---- */
+
 .mh-stats{gap:6px}
 .mh-stats>*{padding:5px 9px;border-radius:9px}
 .mh-stats small{font-size:.6rem}
@@ -640,8 +627,6 @@ body.ls-mode .vn-hint{display:none!important}
 body.ls-mode .mh-stats,body.ls-mode .tabs,body.ls-mode .toolbar{display:none!important}
 @media print{#lsBar{display:none!important}}
 
-/* ================== v0.31 · 极简主页 / 小判读气泡 / 幽灵修复 / 按钮避让 ================== */
-/* ---- ① 主页：首屏只有大按钮 ---- */
 .home-clean{padding:14px!important}
 .home-cta{text-align:center;padding:6px 4px 10px}
 .home-kicker{margin:0 0 10px;font-size:.66rem;letter-spacing:.18em;color:#9fb8d0;font-weight:800}
@@ -669,7 +654,7 @@ body.ls-mode .mh-stats,body.ls-mode .tabs,body.ls-mode .toolbar{display:none!imp
 .hero-fold{padding:12px!important;gap:12px!important}
 .hero-fold .lead{font-size:.86rem}
 @media(max-width:820px){
- /* 手机首屏再瘦一圈：状态板收掉，进度由主页 CTA 下方一行承担 */
+ 
  .mh-stats{display:none!important}
  .masthead{padding:7px 10px!important;min-height:0!important}
  .mh-title h1{font-size:1.04rem!important}
@@ -680,7 +665,7 @@ body.ls-mode .mh-stats,body.ls-mode .tabs,body.ls-mode .toolbar{display:none!imp
  .hero-fold{grid-template-columns:1fr!important}
  .hero-fold .steps{grid-template-columns:1fr!important}
 }
-/* ---- ② 「哈士喵的判读」小气泡 ---- */
+
 .vn-dialog.mode-feedback{width:38%!important;max-height:32%!important;padding:8px 11px 9px!important;
  border-radius:11px!important;bottom:16%!important;left:2%!important;top:auto!important;
  background:linear-gradient(180deg,rgba(10,23,41,.54),rgba(11,30,53,.62))!important;
@@ -696,8 +681,7 @@ body.ls-mode .mh-stats,body.ls-mode .tabs,body.ls-mode .toolbar{display:none!imp
  border-radius:99px;padding:3px 11px;font-size:.72rem;font-weight:800;cursor:pointer}
 body.ls-mode .vn-dialog.mode-feedback{width:34%!important;max-height:36%!important}
 @media(max-width:820px){.vn-dialog.mode-feedback{width:66%!important;max-height:30%!important}}
-/* ---- ③ 幽灵修复：呼吸硬切 + 副角色不再半透明 ---- */
-/* 原 ease-in-out 交叉淡化在 25%/75% 时两帧各 .5，两张略错位图叠成重影＝幽灵 */
+
 @keyframes breathA{0%,49.9%{opacity:1;transform:translateY(0) scaleY(1)}
  50%,100%{opacity:0;transform:translateY(0) scaleY(1)}}
 @keyframes breathB{0%,49.9%{opacity:0;transform:translateY(0) scaleY(1)}
@@ -708,31 +692,29 @@ body.ls-mode .vn-dialog.mode-feedback{width:34%!important;max-height:36%!importa
 .vn.feedback-mode .vn-char,.vn.feedback-mode .vn-char.sub,.vn.feedback-mode .vn-char.sub2,
 .vn.feedback-mode.frame-half.choice-mode .vn-char.sub,
 .vn.feedback-mode.frame-half.choice-mode .vn-char.sub2{opacity:1!important;filter:none!important}
-/* 表情差分静态层：关掉双帧动画，只显示一帧 */
+
 .expr-static .bf,.expr-static.breathe-css{animation:none!important}
 .expr-static .bf.b{display:none!important}
 .expr-static .bf.a{opacity:1!important;transform:none!important}
-/* ---- ④ 横屏两个按钮：竖排贴右边缘中部，不压 HUD / 对白 / 选项 / 角色 ---- */
+
 body.ls-mode #lsBar{flex-direction:column!important;align-items:flex-end!important;
  justify-content:center!important;padding:0 4px!important;gap:8px!important}
-/* 纯图标小圆钮：文字收起、只留 ↩ / ⟳，贴最右边缘 */
+
 body.ls-mode #lsBar button{width:36px!important;height:36px!important;min-width:36px!important;
  min-height:36px!important;padding:0!important;font-size:0!important;border-radius:50%!important;
  white-space:nowrap;overflow:hidden;background:rgba(10,26,44,.74)!important;
  display:flex!important;align-items:center;justify-content:center}
 body.ls-mode #lsBar .ls-exit::before{content:'↩';font-size:1.08rem;line-height:1;color:#ffe4ac}
 body.ls-mode #lsBar .ls-flip::before{content:'⟳';font-size:1.08rem;line-height:1;color:#ffe4ac}
-/* 角色右侧留出 5% 安全带，让小圆钮落在立绘之外 */
+
 body.ls-mode .vn.frame-half .vn-char,body.ls-mode .vn.frame-full .vn-char{right:5%!important}
 body.ls-mode .vn-hud{padding-right:8px!important}
 @media print{.home-fold{display:none!important}}
 
-/* ================== v0.31 · 折叠不留白 / 通关下一话 / 题干去气泡 / 提示改名 ================== */
-/* ---- ① 主页折叠时不再撑出 62vh 大空盒 ---- */
 #home.home-clean{min-height:0!important;height:auto!important}
 #home.home-clean:not(:has(#homeFold[open])){padding-bottom:12px!important}
 .home-fold:not([open]){margin-bottom:0}
-/* ---- ② 「选出正确项」一行小字，不用气泡 ---- */
+
 .vn-dialog.mode-choice{display:none!important}
 .vn-dialog.mode-feedback{display:block!important}
 .vn-prompt{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
@@ -741,7 +723,7 @@ body.ls-mode .vn-hud{padding-right:8px!important}
 .vn-prompt small{font-size:.68rem;font-weight:600;color:#b9cee2;letter-spacing:.02em}
 body.ls-mode .vn-prompt{font-size:.74rem;margin-bottom:3px}
 @media(max-width:820px){.vn-prompt{font-size:.76rem}.vn-prompt small{font-size:.64rem}}
-/* ---- ③ 通关卡片：通关后自动浮出，给下一话入口 ---- */
+
 .vn-clear{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
  z-index:40;width:min(86%,430px);max-height:82%;overflow-y:auto;
  padding:16px 18px 14px;border-radius:16px;text-align:center;
@@ -768,8 +750,6 @@ body.ls-mode .vn-clear h3{font-size:.9rem}
 @media(max-width:820px){.vn-clear{width:min(92%,380px);padding:13px 14px}}
 @media print{.vn-clear{display:none!important}}
 
-/* ================== v0.31 · 紧凑地图 / 名牌贴气泡 / 竖屏 HUD 避让 ================== */
-/* ---- ① 关卡地图：矮卡片 + 已完成折叠到底部 ---- */
 .map-intro{margin:0 0 10px;font-size:.78rem;line-height:1.5}
 #map>h2{margin:0 0 4px;font-size:1.18rem}
 #map>p.muted{margin:0 0 8px}
@@ -803,16 +783,16 @@ body.ls-mode .vn-clear h3{font-size:.9rem}
  #map .chapter{font-size:.84rem;margin:10px 0 5px;padding:5px 8px}
  .map-intro{font-size:.7rem}
 }
-/* ---- ② 名牌收进气泡内第一行：零距离紧贴，不再浮空遮挡 ---- */
+
 .vn-dialog .vn-name{position:static!important;display:inline-block!important;
  top:auto!important;left:auto!important;bottom:auto!important;transform:none!important;
  margin:0 5px 5px 0!important;padding:2px 9px!important;
  font-size:.70rem!important;line-height:1.4;vertical-align:middle;
  white-space:nowrap;max-width:100%;overflow:hidden;text-overflow:ellipsis}
-.vn-dialog::before{display:none!important}  /* 去掉浮空小尖角，名牌与气泡连成一体 */
+.vn-dialog::before{display:none!important}  
 .vn-dialog .vn-text{display:block;clear:both}
 .vn-dialog.mode-feedback .vn-name{font-size:.68rem!important;padding:1px 8px!important}
-/* 横屏：气泡更透、取消模糊，避免整块盖住角色 */
+
 body.ls-mode .vn-dialog{
  background:linear-gradient(180deg,rgba(10,23,41,.20),rgba(11,30,53,.26))!important;
  border-color:rgba(201,163,94,.32)!important;
@@ -820,24 +800,23 @@ body.ls-mode .vn-dialog{
  box-shadow:0 4px 14px #0005!important}
 body.ls-mode .vn-dialog .vn-name{font-size:.62rem!important;padding:1px 7px!important}
 body.ls-mode .vn-dialog::before{background:transparent!important}
-/* ---- ③ 竖屏 HUD 单行化 + 小角色下移放大 ---- */
+
 @media (orientation:portrait) and (max-width:820px){
  .vn-hud{flex-wrap:nowrap!important;gap:4px;padding:5px 7px!important;align-items:center}
  .vn-hud>span{font-size:.62rem!important;padding:2px 6px!important;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%}
- .vn-hud>span:nth-child(2){display:none!important}   /* 卷次/剧透行，避免换行堆叠 */
+white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:46%}
+ .vn-hud>span:nth-child(2){display:none!important}   
  .vn-hud .wx{max-width:30%!important;flex:none}
- .vn-hud .vn-land{display:none!important}            /* 「竖屏建议点横屏」挡住小角色 */
+ .vn-hud .vn-land{display:none!important}            
  .vn-char.sub{top:20%!important;height:42%!important;max-width:32%!important;
-  left:2%!important;opacity:.95!important}
+left:2%!important;opacity:.95!important}
  .vn-char.sub2{top:26%!important;height:34%!important}
  .vn-dialog .vn-name{font-size:.72rem!important}
 }
 @media print{.map-done{display:none!important}}
 
-/* ================== v0.31 · 判读条 / 素材展柜 / 可调透明度 / 立绘交互 ================== */
 :root{--dlgA:.24;--dlgA2:.29}
-/* ---- ① 判读条：题干/提示/反馈同一条，紧贴底部选项面板 ---- */
+
 .vn-judge{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;
  margin:0 0 7px;padding:6px 9px;border-radius:9px;
  background:rgba(10,23,41,calc(var(--dlgA) - .04));
@@ -851,7 +830,7 @@ body.ls-mode .vn-dialog::before{background:transparent!important}
 .vn-judge-back{border:1px solid #c9a35e!important;background:#2d2617!important;color:#ffe4ac!important;
  border-radius:99px!important;padding:2px 10px!important;min-height:26px!important;
  font-size:.70rem!important;font-weight:800!important;flex:none}
-/* 浮空判读小气泡彻底退役：对白气泡只负责 vnLines */
+
 .vn-dialog.mode-choice,.vn-dialog.mode-feedback{display:none!important}
 .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dlgA)),rgba(11,30,53,var(--dlgA2)))!important;
  border-color:rgba(201,163,94,.55)!important;
@@ -863,16 +842,16 @@ body.ls-mode .vn-dialog::before{background:transparent!important}
 body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dlgA)),rgba(11,30,53,var(--dlgA2)))!important}
 @media(max-width:820px){.vn-judge{font-size:.73rem;padding:5px 7px;margin-bottom:5px}
  .vn-judge .vn-judge-body{max-height:4.6em}}
-/* ---- ② 设置滑块 ---- */
+
 .set-slider{margin:7px 0 3px;font-size:.76rem;color:#c8dcf0}
 .set-slider label{display:flex;justify-content:space-between;gap:8px;margin-bottom:3px;font-weight:700}
 .set-slider label b{color:#ffe4ac;font-variant-numeric:tabular-nums}
 .set-slider input[type=range]{width:100%;height:22px;accent-color:#f0c86b;cursor:pointer}
 #settingsBody .set-slider input[type=range]{background:transparent}
-/* 测试结果头像：真实抠图立绘 */
+
 .result-hero .av{width:96px;height:96px;object-fit:contain;display:block;margin:0 auto 6px;
  filter:drop-shadow(0 8px 18px #0008)}
-/* ---- ③ 立绘交互 ---- */
+
 .vn-actor{cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
 .vn-actor.dragging{cursor:grabbing}
 .vn-actor.poke{animation:vnPoke .58s cubic-bezier(.2,.9,.3,1.3)}
@@ -883,7 +862,7 @@ body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dl
 @keyframes vnPop{0%{opacity:0;transform:translateY(6px) scale(.6)}25%{opacity:1;transform:translateY(-8px) scale(1.15)}
  100%{opacity:0;transform:translateY(-38px) scale(.9)}}
 @media (prefers-reduced-motion:reduce){.vn-actor.poke{animation:none}.vn-poke-pop{display:none}}
-/* ---- ④ 素材展柜（主页 + 资料库共用） ---- */
+
 .asset-case{margin-top:14px;border:1px solid #3a5575;border-radius:14px;
  background:linear-gradient(165deg,rgba(13,29,49,.84),rgba(8,20,36,.86));overflow:hidden}
 .asset-case>summary{cursor:pointer;list-style:none;padding:10px 14px;font-weight:900;
@@ -929,8 +908,6 @@ body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dl
  .asset-thumb{min-height:122px}.asset-thumb>img{height:72px}.asset-stage{height:200px}}
 @media print{.asset-case{display:none!important}.asset-stage.full{position:static;height:230px}}
 
-/* ================== v0.31 · 展柜 / 立绘表演 / 竖屏场景 / 词条配图 ================== */
-/* ---- ① 呼吸与拖拽解耦：动画改用独立 translate，transform 全留给交互 ---- */
 .vn-char.breathe-css{animation:breath18 3.4s ease-in-out infinite!important}
 @keyframes breath18{0%,100%{translate:0 0}50%{translate:0 -3px}}
 .vn-actor .bf.a{animation:breath18a 3.4s ease-in-out infinite!important}
@@ -938,7 +915,7 @@ body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dl
 @keyframes breath18a{0%,100%{opacity:1;translate:0 0}50%{opacity:0;translate:0 -3px}}
 @keyframes breath18b{0%,100%{opacity:0;translate:0 0}50%{opacity:1;translate:0 -3px}}
 @media (prefers-reduced-motion:reduce){.vn-char.breathe-css,.vn-actor .bf{animation:none!important}}
-/* ---- ② 点击 / 拖动表演（独立属性，不覆盖 inline transform） ---- */
+
 .vn-actor{cursor:grab!important;touch-action:none!important;user-select:none;-webkit-user-select:none;
  transform-origin:center bottom;will-change:transform}
 .vn-actor.dragging18{cursor:grabbing!important;filter:drop-shadow(0 14px 20px #000a)}
@@ -961,9 +938,9 @@ body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dl
 .vn-drag-tag.on{opacity:1}
 @media (prefers-reduced-motion:reduce){.vn-actor.poke18,.vn-actor.shake18,.vn-actor.sway18,.vn-actor.land18{animation:none}
  .vn-act-say,.vn-drag-tag{display:none}}
-/* ---- ③ 竖屏看得见场景 ---- */
-.vn .vn-bg{object-fit:cover;transition:filter .3s}
-.vn.scene-peek .vn-char,.vn.scene-peek .vn-dialog{opacity:.05!important;pointer-events:none!important}
+
+.vn .vn-bg{object-fit:contain;object-position:50% 50%;transition:filter .3s}
+.vn.scene-peek .vn-char,.vn.scene-peek .vn-dialog{opacity:0!important;pointer-events:none!important;visibility:hidden!important}
 .vn.scene-peek .vn-shade{opacity:.08!important}
 .vn.scene-peek .vn-ctl{opacity:.38!important}
 .vn.scene-peek .vn-bg{filter:brightness(1.08) saturate(1.08)}
@@ -977,7 +954,7 @@ body.ls-mode .vn-dialog{background:linear-gradient(180deg,rgba(10,23,41,var(--dl
  .vn .vn-ctl{background:linear-gradient(180deg,rgba(10,23,41,calc(var(--dlgA) - .02)),rgba(11,30,53,calc(var(--dlgA2) - .02)))!important}
  .vn .vn-shade{opacity:.55}
 }
-/* ---- ④ 素材展柜 v0.31：紧凑 / 双层叠加 / 画框内嵌操作 ---- */
+
 .case18{margin-top:12px;border:1px solid #3a5575;border-radius:13px;overflow:hidden;
  background:linear-gradient(165deg,rgba(13,29,49,.9),rgba(8,20,36,.92))}
 .case18>summary{cursor:pointer;list-style:none;padding:9px 12px;font-weight:900;font-size:.9rem;
@@ -1048,7 +1025,7 @@ body.has-asset-full .case18-ops button{width:38px;height:38px;font-size:1rem}
  .case18-tabs button{min-height:26px;font-size:.66rem;padding:3px 8px}
 }
 @media print{.case18{display:none!important}.case18-frame.asset-full{position:static;height:228px}}
-/* ---- ⑤ 资料库词条配图 ---- */
+
 .entry-art{margin-top:12px;border-top:1px solid #355573;padding-top:10px}
 .entry-art>b{display:block;color:#ffe4ac;font-size:.84rem;margin-bottom:7px}
 .entry-art-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
@@ -1066,7 +1043,7 @@ body.has-asset-full .case18-ops button{width:38px;height:38px;font-size:1rem}
 .lb18-cap{display:flex;gap:12px;align-items:center;color:#ffe4ac;font-size:.84rem}
 .lb18-cap button{border:1px solid #ffe4ac;background:#2d2617;color:#ffe4ac;border-radius:99px;
  padding:6px 16px;font-size:.78rem;font-weight:800;cursor:pointer}
-/* ---- ⑥ 人格测试兜底 ---- */
+
 .quiz-top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
 .quiz-top button{border:1px solid #f4c96b;background:#2d2617;color:#ffe4ac;border-radius:99px;
  padding:6px 14px;min-height:34px;font-size:.76rem;font-weight:800;cursor:pointer}
@@ -1078,8 +1055,6 @@ body.has-asset-full .case18-ops button{width:38px;height:38px;font-size:1rem}
 #quizCard .choice{transition:transform .14s,background .14s}
 #quizCard .choice:active{transform:scale(.97)}
 
-/* ================== v0.31 · 统一拖拽 / 布局互斥 / 全屏预览 / 长按选择 / 原稿 ================== */
-/* ① 立绘层级与命中：之前气泡与 canvas 压在角色上，导致「游戏内人物立绘拖不动」 */
 .vn-actor{z-index:14!important;pointer-events:auto!important;transform-origin:center bottom;will-change:transform}
 .vn .vn-fx,.vn .vn-shade{pointer-events:none}
 .vn .vn-bg{pointer-events:auto}
@@ -1091,11 +1066,11 @@ body.has-asset-full .case18-ops button{width:38px;height:38px;font-size:1rem}
  box-shadow:0 8px 26px #000a;animation:v19toast 1.7s ease-out forwards}
 @keyframes v19toast{0%{opacity:0;translate:-50% 10px}12%{opacity:1;translate:-50% 0}
  78%{opacity:1}100%{opacity:0;translate:-50% -12px}}
-/* ② 名牌 = 真头像框（v0.18 之前只是文字名牌，不是放头像的） */
+
 .vn-name{display:flex!important;align-items:center;gap:6px;line-height:1}
 .vn-avatar{width:26px;height:26px;flex:none;object-fit:contain;border-radius:50%;
  background:#0b1e35;border:1px solid #ffe4ac;box-shadow:0 2px 6px #0008}
-/* ③ 布局调整：所有文字气泡可拖 / 可调宽高；组件互斥、左右不越屏 */
+
 body.v19-layout .v19-box{outline:2px dashed #f4c96b;outline-offset:-3px;
  overflow:visible!important;box-shadow:0 0 0 9999px #03081222;cursor:move}
 body.v19-layout .v19-box.v19-active{outline-color:#8fe0ad}
@@ -1108,7 +1083,7 @@ body.v19-layout .v19-grab,body.v19-layout .v19-resize{display:block}
 .v19-box{transition:box-shadow .18s}
 .v19-box.v19-reject{animation:v19reject .4s ease-in-out}
 @keyframes v19reject{0%,100%{translate:0 0}25%{translate:-7px 0}60%{translate:6px 0}}
-/* ④ 展柜：缩略图自带 ⛶；全屏时锁场景层、只让人物层可拖 */
+
 .th-full{position:absolute;right:3px;top:3px;z-index:4;width:22px;height:22px;
  border-radius:50%;display:grid;place-items:center;font-size:.70rem;font-weight:900;
  background:#12263ed9;border:1px solid #ffe4ac99;color:#ffe4ac;opacity:.85;cursor:zoom-in}
@@ -1123,7 +1098,7 @@ body.v19-layout .v19-grab,body.v19-layout .v19-resize{display:block}
  object-fit:cover;border-radius:0;box-shadow:none}
 .lightbox18.asset-scene .lb18-cap{position:absolute;right:14px;bottom:14px;
  background:#081827e8;border-radius:99px;padding:5px 10px}
-/* ⑤ 长按选择面板 */
+
 .v19-pop{position:fixed;z-index:9997;left:50%;top:50%;translate:-50% -50%;
  width:min(330px,90vw);max-height:64vh;overflow:auto;
  background:linear-gradient(165deg,#162e49f7,#0b1c2ff9);border:1px solid #c9a35e;
@@ -1139,7 +1114,7 @@ body.v19-layout .v19-grab,body.v19-layout .v19-resize{display:block}
 .v19-pop .v19-opts button.sel{border-color:#f4c96b;background:#3a2f19;color:#ffe4ac}
 .v19-pop .v19-opts button:disabled{opacity:.42;cursor:not-allowed}
 .v19-pop small{display:block;color:#8fa9c4;font-size:.66rem;margin-top:8px;line-height:1.5}
-/* ⑥ 作者原稿查看器：可点可拖，但永远不出方框 */
+
 .core19{position:fixed;inset:0;z-index:9998;background:#020812f0;
  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:14px}
 .core19-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;color:#ffe4ac;font-weight:900}
@@ -1154,7 +1129,7 @@ body.v19-layout .v19-grab,body.v19-layout .v19-resize{display:block}
 .core19-frame img{position:absolute;left:0;top:0;max-width:none;max-height:none;
  user-select:none;-webkit-user-drag:none;transform-origin:0 0;pointer-events:auto}
 .core19-tip{color:#8fa9c4;font-size:.72rem;text-align:center;line-height:1.5}
-/* ⑦ 设置面板新分组 */
+
 .v19-set-note{display:block;color:#8fa9c4;font-size:.68rem;line-height:1.5;margin-top:6px}
 .v19-row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
 #settingsBody .set-group.v19-grp{border-top:1px solid #f4c96b55;padding-top:10px}
@@ -1165,7 +1140,6 @@ body.v19-layout .v19-grab,body.v19-layout .v19-resize{display:block}
 }
 @media print{.v19-pop,.core19,.v19-toast,.th-full,.v19-grab,.v19-resize{display:none!important}}
 
-/* ================== v0.31 · 全站紧凑 / 顶部不再有原稿按钮 ================== */
 .masthead{padding:8px 12px!important;margin:4px 0 7px!important;border-radius:13px!important;gap:10px!important}
 .tabs{gap:5px!important;padding:2px 2px 5px!important}
 .toolbar{gap:5px!important;margin:8px 0 6px!important}
@@ -1184,62 +1158,59 @@ p{margin:0 0 7px!important}
 .home-cta{padding:4px 4px 7px!important}
 .bigBtn{min-height:72px!important;font-size:1.28rem!important}
 details.card>summary{padding:4px 0!important}
-/* 顶部导航永不出现「📜 作者原稿」按钮；设置里降级为一行文字链接 */
+
 .tabs button[data-core]{display:none!important}
 #v19Core{background:transparent!important;border:0!important;color:#a9c2da!important;
-  text-decoration:underline!important;min-height:0!important;padding:3px 4px!important;
-  width:auto!important;text-align:left!important;box-shadow:none!important;font-size:.78rem!important}
+text-decoration:underline!important;min-height:0!important;padding:3px 4px!important;
+width:auto!important;text-align:left!important;box-shadow:none!important;font-size:.78rem!important}
 #v19Core:hover{background:transparent!important;color:#ffe4ac!important}
 @media(max-width:820px){
-  .masthead{padding:6px 10px!important;margin:3px 0 5px!important}
-  .panel{padding:11px!important}
-  .toolbar button,.tab,.small-btn,.chip{min-height:36px!important;padding:5px 9px!important}
+.masthead{padding:6px 10px!important;margin:3px 0 5px!important}
+.panel{padding:11px!important}
+.toolbar button,.tab,.small-btn,.chip{min-height:36px!important;padding:5px 9px!important}
 }
 
-/* v0.31 修正：手机工具栏强制单行横滚，避免换行把「开始」推下去；原稿链接彻底去按钮底 */
 @media(max-width:820px){
-  .toolbar{flex-wrap:nowrap!important;overflow-x:auto!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch}
-  .toolbar::-webkit-scrollbar{display:none}
-  .toolbar>*{flex:none!important;white-space:nowrap}
-  .home-kicker{margin:0 0 6px!important}
+.toolbar{flex-wrap:nowrap!important;overflow-x:auto!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch}
+.toolbar::-webkit-scrollbar{display:none}
+.toolbar>*{flex:none!important;white-space:nowrap}
+.home-kicker{margin:0 0 6px!important}
 }
 #settingsBody button#v19Core,.set-group button#v19Core{background:transparent!important;border:0!important;
-  box-shadow:none!important;color:#a9c2da!important;text-decoration:underline!important;
-  min-height:0!important;padding:3px 4px!important;width:auto!important;text-align:left!important;
-  font-size:.78rem!important;border-radius:0!important}
+box-shadow:none!important;color:#a9c2da!important;text-decoration:underline!important;
+min-height:0!important;padding:3px 4px!important;width:auto!important;text-align:left!important;
+font-size:.78rem!important;border-radius:0!important}
 #settingsBody button#v19Core:hover{background:transparent!important;color:#ffe4ac!important}
 
-
-/* ============ v0.31 · 原稿入口全部撤下 / 竖屏场景真正可见 ============ */
 [data-core],#v19Core{display:none!important}
 @media(orientation:portrait) and (max-width:820px){
-  .vn .vn-bg{filter:brightness(1.34) saturate(1.14)!important}
-  .vn::after{background:radial-gradient(135% 105% at 50% 38%,transparent 72%,#0308125e 100%)!important}
-  .vn .vn-shade{opacity:.3!important}
+.vn .vn-bg{filter:brightness(1.34) saturate(1.14)!important}
+.vn::after{background:radial-gradient(135% 105% at 50% 38%,transparent 72%,#0308125e 100%)!important}
+.vn .vn-shade{opacity:.3!important}
 @media(orientation:portrait) and (max-width:820px){
-  .vn{background:#0b1626}
-  .vn .vn-bg{object-fit:contain!important;object-position:50% 0%!important;
-    filter:brightness(1.42) saturate(1.18)!important}
-  .vn::after{background:radial-gradient(130% 100% at 50% 30%,transparent 70%,#0308124d 100%)!important}
-  .vn .vn-shade{opacity:.18!important}
-  .vn .vn-char{height:32%!important;top:2%!important;bottom:auto!important}
-  .vn.frame-half .vn-char,.vn.frame-half.choice-mode .vn-char{height:40%!important;top:2%!important}
-  .vn.choice-mode .vn-char{height:28%!important;top:2%!important;bottom:auto!important}
-  .vn .vn-char.sub{height:23%!important;top:6%!important}
-  .vn .vn-char.sub2{height:20%!important;top:9%!important}
+.vn{background:#0b1626}
+.vn .vn-bg{object-fit:contain!important;object-position:50% 0%!important;
+filter:brightness(1.42) saturate(1.18)!important}
+.vn::after{background:radial-gradient(130% 100% at 50% 30%,transparent 70%,#0308124d 100%)!important}
+.vn .vn-shade{opacity:.18!important}
+.vn .vn-char{height:32%!important;top:2%!important;bottom:auto!important}
+.vn.frame-half .vn-char,.vn.frame-half.choice-mode .vn-char{height:40%!important;top:2%!important}
+.vn.choice-mode .vn-char{height:28%!important;top:2%!important;bottom:auto!important}
+.vn .vn-char.sub{height:23%!important;top:6%!important}
+.vn .vn-char.sub2{height:20%!important;top:9%!important}
 }
 .scene-peek-btn{order:-1!important;border-color:#f4c96b!important;background:#3a2f19e6!important;color:#ffe4ac!important}
 .vn.scene-peek .vn-bg{object-fit:contain!important;object-position:50% 0%!important;filter:brightness(1.44) saturate(1.18)!important}
 .vn.scene-peek::after,.vn.scene-peek .vn-shade{display:none!important}
-  .vn .vn-char{height:40%!important;top:5%!important;bottom:auto!important}
-  .vn.frame-half .vn-char,.vn.frame-half.choice-mode .vn-char{height:52%!important;top:4%!important}
-  .vn.choice-mode .vn-char{height:36%!important;top:5%!important;bottom:auto!important}
-  .vn .vn-char.sub{height:28%!important;top:9%!important}
-  .vn .vn-char.sub2{height:24%!important;top:14%!important}
-  .vn .vn-dialog{width:56%!important}
+.vn .vn-char{height:40%!important;top:5%!important;bottom:auto!important}
+.vn.frame-half .vn-char,.vn.frame-half.choice-mode .vn-char{height:52%!important;top:4%!important}
+.vn.choice-mode .vn-char{height:36%!important;top:5%!important;bottom:auto!important}
+.vn .vn-char.sub{height:28%!important;top:9%!important}
+.vn .vn-char.sub2{height:24%!important;top:14%!important}
+.vn .vn-dialog{width:56%!important}
 }
 .scene-peek-btn{order:-1!important;border-color:#f4c96b!important;background:#3a2f19e6!important;
-  color:#ffe4ac!important;box-shadow:0 0 0 2px #f4c96b22!important}
+color:#ffe4ac!important;box-shadow:0 0 0 2px #f4c96b22!important}
 .vn.scene-peek .vn-bg{object-fit:contain!important;filter:brightness(1.36) saturate(1.16)!important}
 .vn.scene-peek::after{display:none!important}
 .vn.scene-peek .vn-shade{display:none!important}
@@ -1247,28 +1218,23 @@ details.card>summary{padding:4px 0!important}
 .vn.scene-peek .vn-ctl{opacity:1!important;justify-content:center!important}
 .vn.scene-peek .vn-char,.vn.scene-peek .vn-dialog{opacity:0!important}
 
-
-/* v0.31 竖屏场景露出：vn-bg 原本被 display:none 隐掉，历轮调亮度均无效 */
 @media(orientation:portrait) and (max-width:820px){
-  .vn .vn-bg{display:block!important;object-fit:contain!important;object-position:50% 0%!important;
-    filter:brightness(1.30) saturate(1.12)!important}
-  .vn .vn-shade{opacity:.12!important}
-  .vn::after{background:radial-gradient(130% 100% at 50% 32%,transparent 74%,#03081240 100%)!important}
+.vn .vn-bg{display:block!important;object-fit:contain!important;object-position:50% 0%!important;
+filter:brightness(1.30) saturate(1.12)!important}
+.vn .vn-shade{opacity:.12!important}
+.vn::after{background:radial-gradient(130% 100% at 50% 32%,transparent 74%,#03081240 100%)!important}
 }
 
-/* v0.31 · 双翼副角色不再被压成一小条 */
 .vn-actor.sub2{width:27%;max-width:27%}
 @media(orientation:portrait) and (max-width:820px){
-  .vn-actor.sub2{width:27%!important;max-width:27%!important}
+.vn-actor.sub2{width:27%!important;max-width:27%!important}
 }
 
-/* v0.31 · 第4关起的表情层副角色：脚贴底，不再贴顶被气泡切一点 */
 .vn-actor.sub.expr-static .bf,.vn-actor.sub.expr-static img.bf{object-position:bottom center!important}
 @media(orientation:portrait) and (max-width:820px){
-  .vn-actor.sub.expr-static .bf{object-position:bottom center!important}
+.vn-actor.sub.expr-static .bf{object-position:bottom center!important}
 }
 
-/* ================== v0.31 · 资料碎片弹窗 UI ================== */
 .modal-content{background:linear-gradient(165deg,rgba(13,29,49,.96),rgba(8,20,36,.97))!important;
  color:#eaf2fb!important;border:1px solid #c9a35e!important;border-radius:18px;
  box-shadow:0 24px 70px #000c;max-width:720px;padding:18px}
@@ -1285,10 +1251,9 @@ details.card>summary{padding:4px 0!important}
 #gameClose{border-color:#55708c!important;background:rgba(14,30,50,.9)!important}
 @media(max-width:520px){.modal-content{padding:13px}#modalDesc{font-size:.76rem}.modal-actions .small-btn{padding:7px 10px;font-size:.8rem}}
 
-/* ================== v0.31 · 裁切感修复：容器比例，不是角色层被裁 ================== */
 .case18-th{min-height:130px}
 .case18-th>img{height:96px!important;object-fit:contain!important;
-  background:radial-gradient(circle at 50% 45%,#1c3a58,#0b1c30)}
+background:radial-gradient(circle at 50% 45%,#1c3a58,#0b1c30)}
 .case18-grid{max-height:264px}
 .case18-th>small{display:block;padding:4px 5px;font-size:.68rem;line-height:1.3}
 .vn-char.sub{max-width:30%;object-position:bottom center}
@@ -1306,18 +1271,18 @@ details.card>summary{padding:4px 0!important}
 @media(max-width:520px){.v28-cards{grid-template-columns:1fr 1fr;gap:8px}.v28-cards figcaption{font-size:.68rem;padding:6px}}
 
 /* ================== v0.31 · 三个角色仍有裁切感的真凶 ==================
-   角色舞台页 .char-btn img 是 height:96px / width:100%（4 列下 156×96，1.63:1 横宽盒），
-   塞 0.8 竖版角色 contain 后只画 77×96（填充约 50%），帽檐/双马尾/长刀看着像被切。
-   上一版只修了资料库的 .case18-th，漏了这一处。 */
+角色舞台页 .char-btn img 是 height:96px / width:100%（4 列下 156×96，1.63:1 横宽盒），
+塞 0.8 竖版角色 contain 后只画 77×96（填充约 50%），帽檐/双马尾/长刀看着像被切。
+上一版只修了资料库的 .case18-th，漏了这一处。 */
 .char-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
 .char-btn{min-height:172px!important}
 .char-btn img{height:auto!important;aspect-ratio:4/5!important;width:100%!important;
-  object-fit:contain!important;object-position:center center!important;padding:4px 0!important;box-sizing:border-box}
+object-fit:contain!important;object-position:center center!important;padding:4px 0!important;box-sizing:border-box}
 @media(min-width:820px){.char-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important}}
 .char-btn{min-height:0!important}
-/* 资料库展柜再留一点安全内边距，横向部件不贴边 */
+
 .case18-th>img{object-position:center center!important;padding:5px 3px!important;box-sizing:border-box}
-/* 三个横向部件多的角色在舞台上略放大，补偿安全留白 */
+
 .vn-char,.vn-actor img,.case18-fg{object-position:center center}
 
 .v29-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:12px}
@@ -1326,7 +1291,6 @@ details.card>summary{padding:4px 0!important}
 .v29-cards figcaption{padding:8px 10px;font-size:.76rem;line-height:1.45;color:#cfe0f0;border-top:1px solid #3a5575}
 @media(max-width:520px){.v29-cards{grid-template-columns:1fr 1fr;gap:8px}.v29-cards figcaption{font-size:.66rem;padding:6px}}
 
-/* ================== v0.31 · 三角色「还是有裁切」彻底收口 ================== */
 .vn-actor .bf,.vn-char,.vn-actor.main .bf{object-position:center bottom!important}
 .case18-fg{object-position:center center!important}
 .v30-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px;margin-top:12px}
@@ -1336,27 +1300,23 @@ details.card>summary{padding:4px 0!important}
 @media(max-width:520px){.v30-cards{grid-template-columns:1fr 1fr 1fr;gap:6px}.v30-cards figcaption{font-size:.6rem;padding:5px}}
 
 /* ================== v0.31 · 裁切真因：载入宽高不够（你猜对了） ==================
-   .vn.frame-half .vn-char{height:100%;top:8%;bottom:auto}
-   → 角色底部永远落在 舞台高度 108% 处，而 .vn 是 overflow:hidden，
-   于是脚掌 / 袍子下摆 / 刀尖被硬切掉 8%。小屏媒体查询恰好把 height 覆盖成 64%，
-   所以之前只在 390×844 验收时一直「完整」；宽视口 / 横屏（1024、1170）一律裁。
-   统一改成 top:2% + height:90% → 底部 92%，任何视口都留 8% 安全边。 */
+.vn.frame-half .vn-char{height:100%;top:8%;bottom:auto}
+→ 角色底部永远落在 舞台高度 108% 处，而 .vn 是 overflow:hidden，
+于是脚掌 / 袍子下摆 / 刀尖被硬切掉 8%。小屏媒体查询恰好把 height 覆盖成 64%，
+所以之前只在 390×844 验收时一直「完整」；宽视口 / 横屏（1024、1170）一律裁。
+统一改成 top:2% + height:90% → 底部 92%，任何视口都留 8% 安全边。 */
 .vn .vn-char,.vn .vn-actor{max-height:92%!important}
 .vn.frame-half .vn-char,.vn.frame-half .vn-actor{height:90%!important;top:2%!important;bottom:auto!important}
 .vn.frame-half.choice-mode .vn-char{height:86%!important;top:2%!important}
 .vn.frame-half .vn-char.sub{height:44%!important;top:12%!important}
 .vn.frame-full .vn-char{height:76%!important}
 .vn .vn-actor .bf{object-position:center bottom!important}
-/* 气泡默认更透一点，下半身在气泡里也能透出来；滑块仍可调 */
 
 .v31-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .v31-cards figure{margin:0;border:1px solid #3a5575;border-radius:12px;overflow:hidden;background:#0b1c30}
 .v31-cards img{display:block;width:100%;height:auto;object-fit:contain}
 .v31-cards figcaption{padding:7px 9px;font-size:.72rem;line-height:1.4;color:#cfe0f0;border-top:1px solid #3a5575}
 
-/* ================== v0.33 · 不动贴图，只扩大载入范围 ==================
-   用户口径：素材本身是完整贴图，是载入时被 object-fit:cover 裁了。
-   角色类容器统一 contain 完整显示；场景板保留 cover 铺满。 */
 .asset-thumb>img{object-fit:contain!important}
 .asset-thumb.scene>img{object-fit:cover!important}
 .case18-th>img{object-fit:contain!important}
@@ -1364,10 +1324,10 @@ details.card>summary{padding:4px 0!important}
 .entry-art-th img{object-fit:contain!important}
 .lightbox18>img{object-fit:contain!important}
 .lightbox18.asset-scene>img{object-fit:cover!important}
-/* 容器加高：contain 之后竖版猫不再是窄窄一条 */
+
 .asset-thumb>img{height:96px!important}
 .case18-th>img{height:64px!important}
-/* 舞台四周留更宽安全边 */
+
 .vn.frame-half .vn-char,.vn.frame-half .vn-actor{height:80%!important;top:3%!important;bottom:auto!important}
 .vn.frame-half.choice-mode .vn-char{height:78%!important;top:3%!important}
 .vn.frame-half .vn-char.sub{height:40%!important;top:12%!important}
@@ -1382,24 +1342,26 @@ details.card>summary{padding:4px 0!important}
 .v34-cards figcaption{padding:7px 9px;font-size:.72rem;line-height:1.4;color:#cfe0f0;border-top:1px solid #3a5575}
 
 /* ================== v0.34 · 个别关卡裁切收尾 ==================
-   ① 竖屏媒体查询里 .vn-bg{object-fit:contain!important;object-position:50% 0%}
-      会把横版场景板挤成舞台中间一块矩形贴片，四周露出 fullBg 的放大版，
-      看起来就像「背景被裁了一块」。改回 cover 铺满，横竖都全屏。 */
+① 竖屏媒体查询里 .vn-bg{object-fit:contain!important;object-position:50% 0%}
+会把横版场景板挤成舞台中间一块矩形贴片，四周露出 fullBg 的放大版，
+看起来就像「背景被裁了一块」。改回 cover 铺满，横竖都全屏。 */
 @media (orientation:portrait){
-  .vn .vn-bg,.vn-bg{object-fit:cover!important;object-position:50% 50%!important}
+.vn .vn-bg,.vn-bg{object-fit:cover!important;object-position:50% 50%!important}
 }
 .vn.scene-peek .vn-bg{object-fit:contain!important;object-position:50% 50%!important}
-/* ② 补了安全边的角色层画布变大，容器同步给足显示区，仍 contain 完整不裁 */
+
 .vn.frame-half .vn-char,.vn.frame-half .vn-actor{height:94%!important;top:1%!important}
 .vn.frame-half .vn-char.sub{height:44%!important;top:10%!important}
 .vn-actor{width:56%!important;max-width:56%!important}
 .vn-actor.sub{width:34%!important;max-width:34%!important}
 .vn-actor.sub2{width:28%!important;max-width:28%!important}
-/* ③ 本轮两张竖版场景板预览 */
+
 .v35-cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
 .v35-cards figure{margin:0;border:1px solid #3a5575;border-radius:12px;overflow:hidden;background:#0b1c30}
 .v35-cards img{display:block;width:100%;height:auto;object-fit:contain}
 .v35-cards figcaption{padding:7px 9px;font-size:.72rem;line-height:1.4;color:#cfe0f0;border-top:1px solid #3a5575}
+#exprPanel{position:fixed;z-index:80;left:50%;top:50%;transform:translate(-50%,-50%);width:min(430px,94vw);max-height:82dvh;overflow:auto;background:var(--card,#fff);color:var(--ink,#222);border:1px solid #9ab;border-radius:14px;box-shadow:0 10px 30px #0007}#exprPanel[hidden]{display:none}#exprGrid button{display:block;width:100%;aspect-ratio:3/4;border:1px solid #8ac;border-radius:10px;background:none;padding:2px;cursor:pointer}#exprGrid button img{width:100%;height:100%;object-fit:contain;pointer-events:none}#exprGrid button[aria-pressed=true]{outline:2px solid #2a7;outline-offset:1px}#exprGrid span{display:block;font-size:11px;line-height:1.2;color:var(--ink,#333)}#exprChar{width:100%;max-width:100%}.vn-stage .vn-speaking{opacity:1!important;transform:translateY(0) scale(1.04);transition:.25s;box-shadow:0 0 0 3px var(--vn-line,#c9a35e),0 0 26px rgba(201,163,94,.55);border-radius:14px}
+.vn-stage .vn-dim{opacity:.4!important;filter:saturate(.55) brightness(.88);transition:.25s}
 </style>
 </head>
 <body>
@@ -1409,75 +1371,75 @@ details.card>summary{padding:4px 0!important}
 
 <!-- 厚涂风美术定义：渐变、笔触滤镜、主立绘与头像 -->
 <svg id="artDefs" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden"><defs>
-  <linearGradient id="furCool" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#f4f7f8"/><stop offset=".35" stop-color="#d3dde5"/><stop offset=".68" stop-color="#9aa9ba"/><stop offset="1" stop-color="#5b6b80"/></linearGradient>
-  <linearGradient id="furWarm" x1=".1" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset=".55" stop-color="#f0e4cd"/><stop offset="1" stop-color="#d8c5a6"/></linearGradient>
-  <linearGradient id="furDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c7c90"/><stop offset="1" stop-color="#33445c"/></linearGradient>
-  <linearGradient id="earIn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c9cd"/><stop offset="1" stop-color="#c9828e"/></linearGradient>
-  <radialGradient id="eyeBlue" cx=".38" cy=".3" r=".75"><stop offset="0" stop-color="#d9f4ff"/><stop offset=".35" stop-color="#69bdf0"/><stop offset=".7" stop-color="#2b79bd"/><stop offset="1" stop-color="#153f73"/></radialGradient>
-  <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dff2ff" stop-opacity=".62"/><stop offset=".5" stop-color="#a9d5f2" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity=".42"/></linearGradient>
-  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a2230"/><stop offset=".45" stop-color="#4d5a6b"/><stop offset=".55" stop-color="#8b98a6"/><stop offset="1" stop-color="#151c28"/></linearGradient>
-  <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0c0"/><stop offset=".5" stop-color="#f0c465"/><stop offset="1" stop-color="#b5812d"/></linearGradient>
-  <radialGradient id="glow" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#ffe9b4" stop-opacity=".9"/><stop offset=".55" stop-color="#8fc4e8" stop-opacity=".3"/><stop offset="1" stop-color="#8fc4e8" stop-opacity="0"/></radialGradient>
-  <radialGradient id="noseG" cx=".35" cy=".25" r=".8"><stop offset="0" stop-color="#8c6a6a"/><stop offset="1" stop-color="#3a2c34"/></radialGradient>
-  <filter id="impasto" x="-25%" y="-25%" width="150%" height="150%"><feTurbulence type="fractalNoise" baseFrequency="0.026" numOctaves="3" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
-  <filter id="brush" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
-  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
-  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="3" result="g"/><feColorMatrix in="g" type="saturate" values="0" result="m"/><feComponentTransfer in="m" result="a"><feFuncA type="linear" slope=".08"/></feComponentTransfer><feBlend in="SourceGraphic" in2="a" mode="multiply"/></filter>
+<linearGradient id="furCool" x1="0" y1="0" x2=".85" y2="1"><stop offset="0" stop-color="#f4f7f8"/><stop offset=".35" stop-color="#d3dde5"/><stop offset=".68" stop-color="#9aa9ba"/><stop offset="1" stop-color="#5b6b80"/></linearGradient>
+<linearGradient id="furWarm" x1=".1" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#fffaf0"/><stop offset=".55" stop-color="#f0e4cd"/><stop offset="1" stop-color="#d8c5a6"/></linearGradient>
+<linearGradient id="furDark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6c7c90"/><stop offset="1" stop-color="#33445c"/></linearGradient>
+<linearGradient id="earIn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c9cd"/><stop offset="1" stop-color="#c9828e"/></linearGradient>
+<radialGradient id="eyeBlue" cx=".38" cy=".3" r=".75"><stop offset="0" stop-color="#d9f4ff"/><stop offset=".35" stop-color="#69bdf0"/><stop offset=".7" stop-color="#2b79bd"/><stop offset="1" stop-color="#153f73"/></radialGradient>
+<linearGradient id="lens" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#dff2ff" stop-opacity=".62"/><stop offset=".5" stop-color="#a9d5f2" stop-opacity=".18"/><stop offset="1" stop-color="#ffffff" stop-opacity=".42"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1a2230"/><stop offset=".45" stop-color="#4d5a6b"/><stop offset=".55" stop-color="#8b98a6"/><stop offset="1" stop-color="#151c28"/></linearGradient>
+<linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0c0"/><stop offset=".5" stop-color="#f0c465"/><stop offset="1" stop-color="#b5812d"/></linearGradient>
+<radialGradient id="glow" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#ffe9b4" stop-opacity=".9"/><stop offset=".55" stop-color="#8fc4e8" stop-opacity=".3"/><stop offset="1" stop-color="#8fc4e8" stop-opacity="0"/></radialGradient>
+<radialGradient id="noseG" cx=".35" cy=".25" r=".8"><stop offset="0" stop-color="#8c6a6a"/><stop offset="1" stop-color="#3a2c34"/></radialGradient>
+<filter id="impasto" x="-25%" y="-25%" width="150%" height="150%"><feTurbulence type="fractalNoise" baseFrequency="0.026" numOctaves="3" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
+<filter id="brush" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5" xChannelSelector="R" yChannelSelector="G" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
+<filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+<filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="3" result="g"/><feColorMatrix in="g" type="saturate" values="0" result="m"/><feComponentTransfer in="m" result="a"><feFuncA type="linear" slope=".08"/></feComponentTransfer><feBlend in="SourceGraphic" in2="a" mode="multiply"/></filter>
 </defs>
 
 <symbol id="huskyHero" viewBox="0 0 520 560">
-  <circle cx="262" cy="268" r="238" fill="url(#glow)"/>
-  <g filter="url(#impasto)" opacity=".5"><path d="M40 300c60-90 150-120 250-96s160 90 190 170c-70 60-160 80-260 60S70 380 40 300z" fill="#8fb6d0" opacity=".35"/><path d="M60 430c90-40 190-30 280 10s110 60 140 40c-40 60-160 80-260 60s-130-50-160-110z" fill="#e6b96a" opacity=".3"/></g>
-  <ellipse cx="262" cy="522" rx="176" ry="22" fill="#4a5b70" opacity=".22" filter="url(#softGlow)"/>
-  <!-- 蓬松卷尾 -->
-  <g filter="url(#impasto)"><path d="M352 424C432 442 486 392 476 314c-8-64-52-88-80-60" fill="none" stroke="url(#furDark)" stroke-width="86" stroke-linecap="round"/><path d="M356 418C428 432 472 388 462 318c-7-52-42-72-66-52" fill="none" stroke="url(#furCool)" stroke-width="70" stroke-linecap="round"/><path d="M366 412C424 424 458 386 450 326c-5-40-32-58-52-42" fill="none" stroke="url(#furWarm)" stroke-width="42" stroke-linecap="round" opacity=".9"/></g>
-  <g fill="none" stroke="#6f8094" stroke-width="9" stroke-linecap="round" opacity=".7"><path d="M448 350q14 12 4 28"/><path d="M438 386q16 8 8 26"/><path d="M404 414q18 4 18 18"/></g>
-  <!-- 身体 -->
-  <g filter="url(#brush)"><ellipse cx="260" cy="424" rx="132" ry="118" fill="url(#furCool)"/><ellipse cx="260" cy="446" rx="94" ry="88" fill="url(#furWarm)"/><path d="M168 366q-22 44-8 92M352 366q22 44 8 92" fill="none" stroke="#8d9db0" stroke-width="14" stroke-linecap="round" opacity=".55"/></g>
-  <!-- 前爪 -->
-  <g filter="url(#brush)"><ellipse cx="204" cy="506" rx="45" ry="29" fill="#fbf7ec"/><ellipse cx="316" cy="506" rx="45" ry="29" fill="#fbf7ec"/><ellipse cx="204" cy="508" rx="16" ry="12" fill="#e8a8b2"/><ellipse cx="316" cy="508" rx="16" ry="12" fill="#e8a8b2"/><g fill="#e8a8b2"><circle cx="184" cy="494" r="6"/><circle cx="204" cy="490" r="6"/><circle cx="224" cy="494" r="6"/><circle cx="296" cy="494" r="6"/><circle cx="316" cy="490" r="6"/><circle cx="336" cy="494" r="6"/></g></g>
-  <!-- 耳朵 -->
-  <g filter="url(#brush)"><path d="M158 176c-22-64-8-100 24-84 27 14 38 50 32 86z" fill="url(#furDark)"/><path d="M362 176c22-64 8-100-24-84-27 14-38 50-32 86z" fill="url(#furDark)"/><path d="M167 168c-14-44-5-70 15-59 17 9 25 32 22 56z" fill="url(#earIn)"/><path d="M353 168c14-44 5-70-15-59-17 9-25 32-22 56z" fill="url(#earIn)"/><path d="M172 158q-6-28 8-38M348 158q6-28-8-38" fill="none" stroke="#fff2ee" stroke-width="5" stroke-linecap="round" opacity=".7"/></g>
-  <!-- 头 -->
-  <g filter="url(#brush)"><path d="M136 250c0-96 54-148 124-148s124 52 124 148c0 84-50 132-124 132s-124-48-124-132z" fill="url(#furCool)"/><path d="M260 116c-30 0-56 8-74 26 22-12 46-16 74-16s52 4 74 16c-18-18-44-26-74-26z" fill="#ffffff" opacity=".35"/><path d="M260 120c-16 26-22 60-20 104 2 40 10 66 20 66s18-26 20-66c2-44-4-78-20-104z" fill="url(#furWarm)"/><path d="M176 168q22-30 52-38-24 22-32 62zM344 168q-22-30-52-38 24 22 32 62z" fill="url(#furDark)" opacity=".52"/><path d="M150 268c-6 44 8 82 34 100-16-30-20-64-16-98zM370 268c6 44-8 82-34 100 16-30 20-64 16-98z" fill="url(#furWarm)"/><path d="M168 292q26 66 92 76 66-10 92-76c-14 56-48 88-92 88s-78-32-92-88z" fill="#fffaf0" opacity=".92"/></g>
-  <!-- 额头条纹笔触 -->
-  <g fill="none" stroke="#5c6b7e" stroke-width="7" stroke-linecap="round" opacity=".62" filter="url(#brush)"><path d="M212 146q16 22 20 46"/><path d="M308 146q-16 22-20 46"/><path d="M232 132q10 26 12 48"/><path d="M288 132q-10 26-12 48"/></g>
-  <g opacity=".5" filter="url(#softGlow)"><ellipse cx="176" cy="326" rx="21" ry="11" fill="#f2a3b3"/><ellipse cx="344" cy="326" rx="21" ry="11" fill="#f2a3b3"/></g>
-  <!-- 圆黑框眼镜 -->
-  <g><circle cx="204" cy="258" r="41" fill="url(#lens)" stroke="url(#metal)" stroke-width="9"/><circle cx="316" cy="258" r="41" fill="url(#lens)" stroke="url(#metal)" stroke-width="9"/><path d="M245 252q15-13 30 0" fill="none" stroke="#1a2230" stroke-width="8" stroke-linecap="round"/><path d="M163 246l-24-10M357 246l24-10" fill="none" stroke="#1a2230" stroke-width="8" stroke-linecap="round"/><path d="M178 232q18-16 40-10M290 222q22-6 40 10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".65"/><path d="M182 286q14 10 30 8M308 294q16 2 30-8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".4"/></g>
-  <!-- 眼睛 -->
-  <g><ellipse cx="204" cy="260" rx="21" ry="22" fill="url(#eyeBlue)"/><ellipse cx="316" cy="260" rx="21" ry="22" fill="url(#eyeBlue)"/><ellipse cx="204" cy="261" rx="10" ry="13" fill="#12375f"/><ellipse cx="316" cy="261" rx="10" ry="13" fill="#12375f"/><circle cx="198" cy="252" r="6" fill="#fff"/><circle cx="310" cy="252" r="6" fill="#fff"/><circle cx="210" cy="268" r="3" fill="#dff4ff"/><circle cx="322" cy="268" r="3" fill="#dff4ff"/><path d="M182 244q22-16 44-2M294 242q22-14 44 2" fill="none" stroke="#2a3646" stroke-width="5" stroke-linecap="round"/></g>
-  <!-- 鼻、嘴、吐舌 -->
-  <g><path d="M244 300q16-10 32 0-4 14-16 14t-16-14z" fill="url(#noseG)"/><ellipse cx="254" cy="303" rx="5" ry="3" fill="#fff" opacity=".5"/><path d="M260 314q-14 16-27 3M260 314q14 16 27 3" fill="none" stroke="#3c3138" stroke-width="4" stroke-linecap="round"/><ellipse cx="260" cy="336" rx="19" ry="14" fill="#ee93a5" stroke="#cf6f84" stroke-width="2"/><path d="M260 325v20" stroke="#cf6f84" stroke-width="2"/><ellipse cx="253" cy="330" rx="6" ry="3" fill="#ffd1da" opacity=".8"/></g>
-  <g fill="none" stroke="#8a97a6" stroke-width="2" opacity=".7" stroke-linecap="round"><path d="M168 306l-30-6M168 316l-30 4M352 306l30-6M352 316l30 4"/></g>
-  <!-- 项圈与资料牌 -->
-  <g filter="url(#brush)"><path d="M196 372q64 30 128 0" fill="none" stroke="#7d5a35" stroke-width="13" stroke-linecap="round"/><path d="M196 372q64 30 128 0" fill="none" stroke="#d9a85c" stroke-width="5" stroke-linecap="round" opacity=".8"/><circle cx="260" cy="390" r="20" fill="url(#goldG)" stroke="#9a6c26" stroke-width="3"/><path d="M253 384h14v13h-14z" fill="#fff6e0" stroke="#9a6c26" stroke-width="1.5"/><path d="M256 388h8M256 391h8M256 394h5" stroke="#9a6c26" stroke-width="1.4"/></g>
-  <!-- 漂浮资料页与光斑 -->
-  <g opacity=".9"><g transform="translate(66 128) rotate(-18)"><rect width="42" height="52" rx="4" fill="#fff6e0" stroke="#c9a35e" stroke-width="2"/><path d="M8 12h26M8 20h26M8 28h18" stroke="#c9a35e" stroke-width="2"/></g><g transform="translate(424 168) rotate(16)"><rect width="36" height="46" rx="4" fill="#fff6e0" stroke="#c9a35e" stroke-width="2"/><path d="M7 11h22M7 18h22M7 25h15" stroke="#c9a35e" stroke-width="2"/></g><g fill="#ffe4a0"><circle cx="96" cy="238" r="5"/><circle cx="430" cy="278" r="4"/><circle cx="118" cy="404" r="3"/><circle cx="408" cy="440" r="5"/><circle cx="260" cy="58" r="4"/></g><path d="M404 96l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#ffe4a0" opacity=".85"/><path d="M92 330l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#ffe4a0" opacity=".7"/></g>
+<circle cx="262" cy="268" r="238" fill="url(#glow)"/>
+<g filter="url(#impasto)" opacity=".5"><path d="M40 300c60-90 150-120 250-96s160 90 190 170c-70 60-160 80-260 60S70 380 40 300z" fill="#8fb6d0" opacity=".35"/><path d="M60 430c90-40 190-30 280 10s110 60 140 40c-40 60-160 80-260 60s-130-50-160-110z" fill="#e6b96a" opacity=".3"/></g>
+<ellipse cx="262" cy="522" rx="176" ry="22" fill="#4a5b70" opacity=".22" filter="url(#softGlow)"/>
+<!-- 蓬松卷尾 -->
+<g filter="url(#impasto)"><path d="M352 424C432 442 486 392 476 314c-8-64-52-88-80-60" fill="none" stroke="url(#furDark)" stroke-width="86" stroke-linecap="round"/><path d="M356 418C428 432 472 388 462 318c-7-52-42-72-66-52" fill="none" stroke="url(#furCool)" stroke-width="70" stroke-linecap="round"/><path d="M366 412C424 424 458 386 450 326c-5-40-32-58-52-42" fill="none" stroke="url(#furWarm)" stroke-width="42" stroke-linecap="round" opacity=".9"/></g>
+<g fill="none" stroke="#6f8094" stroke-width="9" stroke-linecap="round" opacity=".7"><path d="M448 350q14 12 4 28"/><path d="M438 386q16 8 8 26"/><path d="M404 414q18 4 18 18"/></g>
+<!-- 身体 -->
+<g filter="url(#brush)"><ellipse cx="260" cy="424" rx="132" ry="118" fill="url(#furCool)"/><ellipse cx="260" cy="446" rx="94" ry="88" fill="url(#furWarm)"/><path d="M168 366q-22 44-8 92M352 366q22 44 8 92" fill="none" stroke="#8d9db0" stroke-width="14" stroke-linecap="round" opacity=".55"/></g>
+<!-- 前爪 -->
+<g filter="url(#brush)"><ellipse cx="204" cy="506" rx="45" ry="29" fill="#fbf7ec"/><ellipse cx="316" cy="506" rx="45" ry="29" fill="#fbf7ec"/><ellipse cx="204" cy="508" rx="16" ry="12" fill="#e8a8b2"/><ellipse cx="316" cy="508" rx="16" ry="12" fill="#e8a8b2"/><g fill="#e8a8b2"><circle cx="184" cy="494" r="6"/><circle cx="204" cy="490" r="6"/><circle cx="224" cy="494" r="6"/><circle cx="296" cy="494" r="6"/><circle cx="316" cy="490" r="6"/><circle cx="336" cy="494" r="6"/></g></g>
+<!-- 耳朵 -->
+<g filter="url(#brush)"><path d="M158 176c-22-64-8-100 24-84 27 14 38 50 32 86z" fill="url(#furDark)"/><path d="M362 176c22-64 8-100-24-84-27 14-38 50-32 86z" fill="url(#furDark)"/><path d="M167 168c-14-44-5-70 15-59 17 9 25 32 22 56z" fill="url(#earIn)"/><path d="M353 168c14-44 5-70-15-59-17 9-25 32-22 56z" fill="url(#earIn)"/><path d="M172 158q-6-28 8-38M348 158q6-28-8-38" fill="none" stroke="#fff2ee" stroke-width="5" stroke-linecap="round" opacity=".7"/></g>
+<!-- 头 -->
+<g filter="url(#brush)"><path d="M136 250c0-96 54-148 124-148s124 52 124 148c0 84-50 132-124 132s-124-48-124-132z" fill="url(#furCool)"/><path d="M260 116c-30 0-56 8-74 26 22-12 46-16 74-16s52 4 74 16c-18-18-44-26-74-26z" fill="#ffffff" opacity=".35"/><path d="M260 120c-16 26-22 60-20 104 2 40 10 66 20 66s18-26 20-66c2-44-4-78-20-104z" fill="url(#furWarm)"/><path d="M176 168q22-30 52-38-24 22-32 62zM344 168q-22-30-52-38 24 22 32 62z" fill="url(#furDark)" opacity=".52"/><path d="M150 268c-6 44 8 82 34 100-16-30-20-64-16-98zM370 268c6 44-8 82-34 100 16-30 20-64 16-98z" fill="url(#furWarm)"/><path d="M168 292q26 66 92 76 66-10 92-76c-14 56-48 88-92 88s-78-32-92-88z" fill="#fffaf0" opacity=".92"/></g>
+<!-- 额头条纹笔触 -->
+<g fill="none" stroke="#5c6b7e" stroke-width="7" stroke-linecap="round" opacity=".62" filter="url(#brush)"><path d="M212 146q16 22 20 46"/><path d="M308 146q-16 22-20 46"/><path d="M232 132q10 26 12 48"/><path d="M288 132q-10 26-12 48"/></g>
+<g opacity=".5" filter="url(#softGlow)"><ellipse cx="176" cy="326" rx="21" ry="11" fill="#f2a3b3"/><ellipse cx="344" cy="326" rx="21" ry="11" fill="#f2a3b3"/></g>
+<!-- 圆黑框眼镜 -->
+<g><circle cx="204" cy="258" r="41" fill="url(#lens)" stroke="url(#metal)" stroke-width="9"/><circle cx="316" cy="258" r="41" fill="url(#lens)" stroke="url(#metal)" stroke-width="9"/><path d="M245 252q15-13 30 0" fill="none" stroke="#1a2230" stroke-width="8" stroke-linecap="round"/><path d="M163 246l-24-10M357 246l24-10" fill="none" stroke="#1a2230" stroke-width="8" stroke-linecap="round"/><path d="M178 232q18-16 40-10M290 222q22-6 40 10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" opacity=".65"/><path d="M182 286q14 10 30 8M308 294q16 2 30-8" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".4"/></g>
+<!-- 眼睛 -->
+<g><ellipse cx="204" cy="260" rx="21" ry="22" fill="url(#eyeBlue)"/><ellipse cx="316" cy="260" rx="21" ry="22" fill="url(#eyeBlue)"/><ellipse cx="204" cy="261" rx="10" ry="13" fill="#12375f"/><ellipse cx="316" cy="261" rx="10" ry="13" fill="#12375f"/><circle cx="198" cy="252" r="6" fill="#fff"/><circle cx="310" cy="252" r="6" fill="#fff"/><circle cx="210" cy="268" r="3" fill="#dff4ff"/><circle cx="322" cy="268" r="3" fill="#dff4ff"/><path d="M182 244q22-16 44-2M294 242q22-14 44 2" fill="none" stroke="#2a3646" stroke-width="5" stroke-linecap="round"/></g>
+<!-- 鼻、嘴、吐舌 -->
+<g><path d="M244 300q16-10 32 0-4 14-16 14t-16-14z" fill="url(#noseG)"/><ellipse cx="254" cy="303" rx="5" ry="3" fill="#fff" opacity=".5"/><path d="M260 314q-14 16-27 3M260 314q14 16 27 3" fill="none" stroke="#3c3138" stroke-width="4" stroke-linecap="round"/><ellipse cx="260" cy="336" rx="19" ry="14" fill="#ee93a5" stroke="#cf6f84" stroke-width="2"/><path d="M260 325v20" stroke="#cf6f84" stroke-width="2"/><ellipse cx="253" cy="330" rx="6" ry="3" fill="#ffd1da" opacity=".8"/></g>
+<g fill="none" stroke="#8a97a6" stroke-width="2" opacity=".7" stroke-linecap="round"><path d="M168 306l-30-6M168 316l-30 4M352 306l30-6M352 316l30 4"/></g>
+<!-- 项圈与资料牌 -->
+<g filter="url(#brush)"><path d="M196 372q64 30 128 0" fill="none" stroke="#7d5a35" stroke-width="13" stroke-linecap="round"/><path d="M196 372q64 30 128 0" fill="none" stroke="#d9a85c" stroke-width="5" stroke-linecap="round" opacity=".8"/><circle cx="260" cy="390" r="20" fill="url(#goldG)" stroke="#9a6c26" stroke-width="3"/><path d="M253 384h14v13h-14z" fill="#fff6e0" stroke="#9a6c26" stroke-width="1.5"/><path d="M256 388h8M256 391h8M256 394h5" stroke="#9a6c26" stroke-width="1.4"/></g>
+<!-- 漂浮资料页与光斑 -->
+<g opacity=".9"><g transform="translate(66 128) rotate(-18)"><rect width="42" height="52" rx="4" fill="#fff6e0" stroke="#c9a35e" stroke-width="2"/><path d="M8 12h26M8 20h26M8 28h18" stroke="#c9a35e" stroke-width="2"/></g><g transform="translate(424 168) rotate(16)"><rect width="36" height="46" rx="4" fill="#fff6e0" stroke="#c9a35e" stroke-width="2"/><path d="M7 11h22M7 18h22M7 25h15" stroke="#c9a35e" stroke-width="2"/></g><g fill="#ffe4a0"><circle cx="96" cy="238" r="5"/><circle cx="430" cy="278" r="4"/><circle cx="118" cy="404" r="3"/><circle cx="408" cy="440" r="5"/><circle cx="260" cy="58" r="4"/></g><path d="M404 96l5 13 13 5-13 5-5 13-5-13-13-5 13-5z" fill="#ffe4a0" opacity=".85"/><path d="M92 330l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#ffe4a0" opacity=".7"/></g>
 </symbol>
 
 <symbol id="huskyAvatar" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="22" fill="#e8f1f8"/><circle cx="50" cy="52" r="42" fill="url(#glow)"/>
-  <g filter="url(#brush)"><path d="M18 42C8 22 12 8 26 14c11 5 16 16 15 28zM82 42C92 22 88 8 74 14c-11 5-16 16-15 28z" fill="url(#furDark)"/><path d="M22 40C15 25 18 16 27 20c7 4 10 11 10 20zM78 40C85 25 82 16 73 20c-7 4-10 11-10 20z" fill="url(#earIn)"/><path d="M20 52c0-22 13-34 30-34s30 12 30 34c0 20-13 32-30 32S20 72 20 52z" fill="url(#furCool)"/><path d="M50 20c-7 8-9 18-8 30 1 10 4 16 8 16s7-6 8-16c1-12-1-22-8-30z" fill="url(#furWarm)"/><path d="M26 62q10 16 24 18 14-2 24-18c-4 14-12 22-24 22s-20-8-24-22z" fill="#fffaf0"/></g>
-  <g><circle cx="37" cy="53" r="13" fill="url(#lens)" stroke="#1a2230" stroke-width="4"/><circle cx="63" cy="53" r="13" fill="url(#lens)" stroke="#1a2230" stroke-width="4"/><path d="M50 51h0" stroke="#1a2230" stroke-width="4" stroke-linecap="round"/><circle cx="37" cy="53" r="7" fill="url(#eyeBlue)"/><circle cx="63" cy="53" r="7" fill="url(#eyeBlue)"/><circle cx="35" cy="51" r="2.2" fill="#fff"/><circle cx="61" cy="51" r="2.2" fill="#fff"/></g>
-  <path d="M45 68q5-3 10 0-2 5-5 5t-5-5z" fill="url(#noseG)"/><ellipse cx="50" cy="77" rx="6" ry="4.5" fill="#ee93a5"/>
+<rect width="100" height="100" rx="22" fill="#e8f1f8"/><circle cx="50" cy="52" r="42" fill="url(#glow)"/>
+<g filter="url(#brush)"><path d="M18 42C8 22 12 8 26 14c11 5 16 16 15 28zM82 42C92 22 88 8 74 14c-11 5-16 16-15 28z" fill="url(#furDark)"/><path d="M22 40C15 25 18 16 27 20c7 4 10 11 10 20zM78 40C85 25 82 16 73 20c-7 4-10 11-10 20z" fill="url(#earIn)"/><path d="M20 52c0-22 13-34 30-34s30 12 30 34c0 20-13 32-30 32S20 72 20 52z" fill="url(#furCool)"/><path d="M50 20c-7 8-9 18-8 30 1 10 4 16 8 16s7-6 8-16c1-12-1-22-8-30z" fill="url(#furWarm)"/><path d="M26 62q10 16 24 18 14-2 24-18c-4 14-12 22-24 22s-20-8-24-22z" fill="#fffaf0"/></g>
+<g><circle cx="37" cy="53" r="13" fill="url(#lens)" stroke="#1a2230" stroke-width="4"/><circle cx="63" cy="53" r="13" fill="url(#lens)" stroke="#1a2230" stroke-width="4"/><path d="M50 51h0" stroke="#1a2230" stroke-width="4" stroke-linecap="round"/><circle cx="37" cy="53" r="7" fill="url(#eyeBlue)"/><circle cx="63" cy="53" r="7" fill="url(#eyeBlue)"/><circle cx="35" cy="51" r="2.2" fill="#fff"/><circle cx="61" cy="51" r="2.2" fill="#fff"/></g>
+<path d="M45 68q5-3 10 0-2 5-5 5t-5-5z" fill="url(#noseG)"/><ellipse cx="50" cy="77" rx="6" ry="4.5" fill="#ee93a5"/>
 </symbol>
 </svg>
 
 <div class="app">
 <header class="masthead">
  <div class="mh-left">
-  <div class="mh-title">
-   <div class="mh-kicker" lang="en">A CERTAIN HUSKYMEOW ADVENTURE · 剧情导览同人游戏</div>
-   <h1>哈士喵勇闯<span>魔法禁书目录</span></h1>
-   <p>灰白毛 · 圆黑框眼镜 · 把绕晕的剧情拼回主线</p>
-  </div>
+<div class="mh-title">
+<div class="mh-kicker" lang="en">A CERTAIN HUSKYMEOW ADVENTURE · 剧情导览同人游戏</div>
+<h1>哈士喵勇闯<span>魔法禁书目录</span></h1>
+<p>灰白毛 · 圆黑框眼镜 · 把绕晕的剧情拼回主线</p>
+</div>
  </div>
  <div class="mh-stats" aria-label="游戏状态">
-  <div class="mh-ver"><small>VERSION</small><b>v0.31</b></div>
-  <div class="mh-stat"><small>关卡进度</small><b id="levelText">0 / 30</b></div>
-  <div class="mh-stat"><small>已解锁词条</small><b id="entryText">0 / 0</b></div>
-  <div class="mh-stat"><small>当前难度</small><b id="diffText">普通</b></div>
+<div class="mh-ver"><small>VERSION</small><b>v0.65</b></div>
+<div class="mh-stat"><small>关卡进度</small><b id="levelText">0 / 30</b></div>
+<div class="mh-stat"><small>已解锁词条</small><b id="entryText">0 / 0</b></div>
+<div class="mh-stat"><small>当前难度</small><b id="diffText">普通</b></div>
  </div>
 </header>
 <div id="live" class="sr-only" aria-live="polite"></div>
@@ -1485,45 +1447,36 @@ details.card>summary{padding:4px 0!important}
 <nav class="toolbar compact" id="toolbar" aria-label="全局控制">
  <button id="settingsBtn" class="settings-main" aria-expanded="false" aria-controls="settingsPanel">⚙ 设置</button>
  <label class="wx-pick" for="weatherSel" title="场景天气与联动音效">🌤 <select id="weatherSel" aria-label="场景天气与音效"><option value="auto">自动</option><option value="sunny">☀ 天晴 · 鸟叫</option><option value="rain">🌧 下雨 · 雨声</option><option value="night">🌙 夜晚 · 虫鸣</option><option value="snow">❄ 下雪 · 风声</option><option value="redsnow">🌹 红雪 · 风声</option><option value="fog">🌫 起雾 · 低鸣</option><option value="wind">🍃 起风 · 风声</option><option value="off">⏹ 静止</option></select></label>
+ <button type="button" id="exprBtn" class="land" aria-haspopup="dialog" aria-controls="exprPanel" aria-expanded="false">🎭 表情</button>
  <button id="fullBtn" class="land" title="竖屏手机用 CSS 横屏舞台">⛶ 横屏</button>
  <button id="bgBtn" class="land" aria-pressed="true" title="背景铺满整个视口，竖屏 / 横屏自动换图">🖼 背景：开</button>
 </nav>
-<div id="settingsMask" aria-hidden="true"></div>
+<div id="settingsMask" aria-hidden="true"></div><section id="exprPanel" role="dialog" aria-label="表情管理" hidden> <header id="settingsHead"><span class="grip" aria-hidden="true">⠏</span><b>🎭 表情管理</b><small id="exprWho">选角色 → 点表情</small><button type="button" id="exprClose" aria-label="关闭表情管理">✕</button> </header> <div id="settingsBody"><div class="set-group"><b>角色</b><select id="exprChar" aria-label="选择角色" style="max-width:100%"></select></div><div class="set-group"><b>表情</b><div id="exprGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px"></div><p class="muted" style="margin:6px 0 0">没有差分的角色只显示立绘原图。</p></div> </div> <footer id="settingsFoot"><button type="button" id="exprCloseFoot">✕ 关闭</button></footer></section>
 <section id="settingsPanel" role="dialog" aria-modal="true" aria-label="设置" hidden>
  <header id="settingsHead">
-  <span class="grip" aria-hidden="true">⠿</span><b>⚙ 设置</b>
-  <small>拖动标题栏可移动 · 内容可滚动</small>
-  <button type="button" id="settingsClose" aria-label="关闭设置">✕</button>
+<span class="grip" aria-hidden="true">⠿</span><b>⚙ 设置</b>
+<small>拖动标题栏可移动 · 内容可滚动</small>
+<button type="button" id="settingsClose" aria-label="关闭设置">✕</button>
  </header>
  <div id="settingsBody">
-  <div class="set-group"><b>声音</b>
-   <button id="soundToggle" aria-pressed="true">🔊 音效：开</button>
-   <button id="musicToggle" class="warn" aria-pressed="false">🎵 音乐：关</button>
-   <button id="speakToggle" aria-pressed="false">🗣️ 自动朗读：关</button>
-   <button id="speakBtn">🔁 朗读本句</button>
-   <button id="stopBtn">⏹ 停止声音</button>
-   <button id="packBtn">🎧 导入语音包</button>
-   <input type="file" id="packFiles" accept="audio/*" multiple hidden>
-   <div class="set-slider"><label for="volMaster">🔈 总音量 <b id="volMasterV">72</b></label><input type="range" id="volMaster" min="0" max="100" value="72"></div>
-   <div class="set-slider"><label for="volSfx">🔊 音效 <b id="volSfxV">26</b></label><input type="range" id="volSfx" min="0" max="100" value="26"></div>
-   <div class="set-slider"><label for="volMusic">🎵 音乐 <b id="volMusicV">13</b></label><input type="range" id="volMusic" min="0" max="100" value="13"></div>
-   <div class="set-slider"><label for="volSpeak">🗣️ 朗读 <b id="volSpeakV">90</b></label><input type="range" id="volSpeak" min="0" max="100" value="90"></div>
-  </div>
-  <div class="set-group"><b>画面与构图</b>
-   <div class="set-slider"><label for="alphaRange">🫧 气泡透明度 <b id="alphaV">30</b></label><input type="range" id="alphaRange" min="0" max="90" value="30"></div>
-   <button id="resetActorsBtn">🐾 重置立绘位置 / 大小</button>
-   <label for="frameSel">角色构图</label>
-   <select id="frameSel" aria-label="角色构图"><option value="auto">自动（按场景）</option><option value="full">全身</option><option value="half">半身 · 下半身没入气泡</option></select>
-   <button id="bgBtnInfo" class="set-note">🖼 全屏背景已默认开启，主行按钮可关</button>
-   <button id="morePagesBtn" aria-expanded="false" aria-label="显示更多页面">⋯ 展开更多页面（时间线 / 换卡 / 画廊）</button>
-  </div>
-  <div class="set-group"><b>玩法与无障碍</b>
-   <button id="spoilerToggle" aria-pressed="true">👓 剧透显示：开</button>
-   <button id="timedToggle" aria-pressed="true">⏱ 限时小游戏：开</button>
-   <button id="textModeBtn" aria-pressed="false">🔓 全关文字导览</button>
-   <button id="voiceToggle" aria-pressed="false">🎙️ 语音控制：关</button>
-   <button id="resetBtn">↺ 重玩</button>
-  </div>
+<div class="set-group"><b>声音</b>
+<b>🔇 声音已按需求整体移除</b>（无音频、无语音包、无录音；页面不加载也不请求麦克风）
+</div>
+<div class="set-group"><b>画面与构图</b>
+<div class="set-slider"><label for="alphaRange">🫧 气泡透明度 <b id="alphaV">30</b></label><input type="range" id="alphaRange" min="0" max="90" value="30"></div>
+<button id="resetActorsBtn">🐾 重置立绘位置 / 大小</button>
+<label for="frameSel">角色构图</label>
+<select id="frameSel" aria-label="角色构图"><option value="auto">自动（按场景）</option><option value="full">全身</option><option value="half">半身 · 下半身没入气泡</option></select>
+<button id="bgBtnInfo" class="set-note">🖼 全屏背景已默认开启，主行按钮可关</button>
+<button id="morePagesBtn" aria-expanded="false" aria-label="显示更多页面">⋯ 展开更多页面（时间线 / 换卡 / 画廊）</button>
+</div>
+<div class="set-group"><b>玩法与无障碍</b>
+<button id="spoilerToggle" aria-pressed="true">👓 剧透显示：开</button>
+<button id="timedToggle" aria-pressed="true">⏱ 限时小游戏：开</button>
+<button id="textModeBtn" aria-pressed="false">🔓 文字导览</button>
+<button id="voiceToggle" aria-pressed="false"/button>
+<button id="resetBtn">↺ 重玩</button>
+</div>
  </div>
  <footer id="settingsFoot"><button type="button" id="settingsCloseFoot">✕ 关闭设置</button></footer>
 </section>
@@ -1534,27 +1487,27 @@ details.card>summary{padding:4px 0!important}
 <main id="main">
 <section class="panel home-clean" id="home" role="tabpanel" aria-labelledby="tab-home">
  <div class="home-cta">
-  <p class="home-kicker">A CERTAIN HUSKYMEOW · 剧情导览 AVG</p>
-  <button id="startBtn" class="bigBtn">▶ 开始冒险 <small class="cta-sub" id="ctaSub">从第一关开始</small></button>
-  <p class="home-sub">灰白毛 · 圆黑框眼镜 · 把绕晕的剧情拼回主线</p>
-  <div class="home-quick"><b id="homeProgress">0 / 30</b><span>关卡</span><b id="homeEntries">0 / 152</b><span>词条</span></div>
+<p class="home-kicker">A CERTAIN HUSKYMEOW · 剧情导览 AVG</p>
+<button id="startBtn" class="bigBtn">▶ 开始冒险 <small class="cta-sub" id="ctaSub">从第一关开始</small></button>
+<p class="home-sub">灰白毛 · 圆黑框眼镜 · 把绕晕的剧情拼回主线</p>
+<div class="home-quick"><b id="homeProgress">0 / 30</b><span>关卡</span><b id="homeEntries">0 / 152</b><span>词条</span></div>
  </div>
  <details class="home-fold" id="homeFold"><summary>玩法说明 · 难度 · 资料规模</summary>
-  <div class="hero hero-fold">
-   <div>
-    <p class="lead">你不是上条当麻，也不是茵蒂克丝。你是<b>哈士喵</b>：灰白毛、圆黑框眼镜、吐着舌头，靠提问、观察和一声「啊呜」把绕晕的剧情拼回主线。</p>
-    <div class="steps"><div class="step"><i>01</i><b>看剧情</b><span>选难度，进 AVG 舞台看对白与天气</span></div><div class="step"><i>02</i><b>做选择</b><span>四选一，答对解锁剧情详解与词条</span></div><div class="step"><i>03</i><b>收碎片</b><span>可选限时小游戏；关「限时」直接跳过</span></div></div>
-    <div class="grid"><div class="card"><label for="diff"><b>难度</b></label><br><select id="diff" class="small-btn" style="width:100%;margin-top:6px"><option value="easy">幼喵 · 有提示 · 不限时</option><option value="normal" selected>普通 · 关键提示 · 30 秒</option><option value="hard">原石狂人 · 少提示 · 20 秒</option></select></div><div class="card"><b>资料规模</b><p class="muted" id="homeScale">30 关 · 词条随关卡解锁 · 时间线 · 跨媒体 · 16 题人格测试</p></div></div>
-    <p class="home-note">剧情学习向同人游戏 · 不含原作文本 / 插画 / 音频 · 默认完全剧透，可用「👓 剧透显示」临时遮罩 · 朗读默认关闭。</p>
-    <p id="continueInfo" class="muted"></p>
-   </div>
-   <div class="stage stage-sm" id="homeStage" role="img" aria-label="魔禁画风舞台：深蓝夜色学园都市、淡金魔法阵与漂浮书页，哈士喵角色立于其上">
-    <img class="stage-bg" alt="魔法禁书目录画风统一舞台背景：深蓝夜色的学园都市剪影、淡金色魔法阵圆环、漂浮的空白魔道书页与暖金聚光">
-    <canvas class="vn-fx" aria-hidden="true"></canvas>
-    <img class="stage-char" id="homeChar" alt="">
-    <span class="stage-label" id="homeCharLabel">本体 · 厚涂原设</span>
-   </div>
-  </div>
+<div class="hero hero-fold">
+<div>
+<p class="lead">你不是上条当麻，也不是茵蒂克丝。你是<b>哈士喵</b>：灰白毛、圆黑框眼镜、吐着舌头，靠提问、观察和一声「啊呜」把绕晕的剧情拼回主线。</p>
+<div class="steps"><div class="step"><i>01</i><b>看剧情</b><span>选难度，进 AVG 舞台看对白与天气</span></div><div class="step"><i>02</i><b>做选择</b><span>四选一，答对解锁剧情详解与词条</span></div><div class="step"><i>03</i><b>收碎片</b><span>可选限时小游戏；关「限时」直接跳过</span></div></div>
+<div class="grid"><div class="card"><label for="diff"><b>难度</b></label><br><select id="diff" class="small-btn" style="width:100%;margin-top:6px"><option value="easy">幼喵 · 有提示 · 不限时</option><option value="normal" selected>普通 · 关键提示 · 30 秒</option><option value="hard">原石狂人 · 少提示 · 20 秒</option></select></div><div class="card"><b>资料规模</b><p class="muted" id="homeScale">30 关 · 词条随关卡解锁 · 时间线 · 跨媒体 · 16 题人格测试</p></div></div>
+<p class="home-note">剧情学习向同人游戏 · 不含原作文本 / 插画 / 音频 · 默认完全剧透，可用「👓 剧透显示」临时遮罩 · 朗读功能已移除。</p>
+<p id="continueInfo" class="muted"></p>
+</div>
+<div class="stage stage-sm" id="homeStage" role="img" aria-label="魔禁画风舞台：深蓝夜色学园都市、淡金魔法阵与漂浮书页，哈士喵角色立于其上">
+<img class="stage-bg" alt="魔法禁书目录画风统一舞台背景：深蓝夜色的学园都市剪影、淡金色魔法阵圆环、漂浮的空白魔道书页与暖金聚光">
+<canvas class="vn-fx" aria-hidden="true"></canvas>
+<img class="stage-char" id="homeChar" alt="">
+<span class="stage-label" id="homeCharLabel">本体 · 厚涂原设</span>
+</div>
+</div>
  </details>
 </section>
 <section class="panel" id="map" role="tabpanel" aria-labelledby="tab-map" hidden><h2>关卡地图</h2><div id="mapArea"></div></section>

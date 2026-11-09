@@ -1,0 +1,18 @@
+{
+  "key": "hsm-v081",
+  "source": "C:/Users/60466/WorkBuddy/2026-11-07-09-21-08/hsm-v081/src/哈士喵发布包/index.html",
+  "source_bytes": 14653515,
+  "source_chars": 14491025,
+  "entry_bytes": 127305,
+  "scripts": 1,
+  "styles": 1,
+  "style_bytes": 100512,
+  "app_bytes": [
+    14368381
+  ],
+  "asset_refs": 0,
+  "assets_copied": 0,
+  "root_abs_refs": 0,
+  "data_image": 0,
+  "url_fragment": 44
+}
